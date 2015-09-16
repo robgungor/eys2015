@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+
+
+
+
+									NOTE NOTE NOTE NOTE
+									
+									
+										for the TEMPLATE, any change you make here will be overwritten in the next
+										deployment... instead send change requests to Mihai to update the source
+
+
+
+
+
+
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<data>
+	<!-- APC ERRORS -->
+	<error code="apc1" title="Alert:">There seems to be a problem with your Internet connection.  Please reconnect and try again.  Could not reach URL.</error>
+	<error code="apc2" title="Alert:">There was an error processing your request. Please try again.</error>
+	<error code="apc2.0" title="Alert:">Cropping the image failed</error>
+	<error code="apc2.1" title="Alert:">APS error</error>
+	<error code="apc2.2" title="Alert:">Fatal Parsing Error</error>
+	<error code="apc2.3" title="Alert:">Cannot open the LOC file</error>
+	<error code="apc2.4" title="Alert:">APS Session Expired</error>
+	<error code="apc2.5" title="Alert:">Luxand has not finished processing however the Luxand file was requested</error>
+	<error code="apc2.6" title="Alert:">Cannot open Luxand file</error>
+	<error code="apc2.7" title="Alert:">Manual Points Invalid</error>
+	<error code="apc2.8" title="Alert:">Could not save the Manual Points file</error>
+	<error code="apc3" title="Alert:">Please make sure that the points are placed properly on the face.</error>
+	<error code="apc3.0" title="Alert:">Points improperly placed</error>
+	<error code="apc3.1" title="Alert:">Please try again with a higher resolution photo</error>
+	<error code="apc3.2" title="Alert:">Please try again with photo that is more face on to camera, or try manually correcting the points</error>
+	<error code="apc3.3" title="Alert:">Other error from APS</error>
+	<error code="apc4" title="Alert:">Confirm points status with no points.</error>
+	<error code="apc5" title="Alert:">Submit with points called with no points present.</error>
+	<error code="apc6" title="Alert:">Could not retrieve uploaded image.</error>
+	<error code="apc7" title="Alert:">File must be selected first.</error>
+	<error code="apc8.0" title="Alert:">IO error</error>
+	<error code="apc8.1" title="Alert:">Couldn't launch the browse window</error>
+	<error code="apc8.2" title="Alert:">Security error</error>
+	<error code="apc8.3" title="Alert:">Selected file for upload size exceeds max limit</error>
+	<error code="apc8.4" title="Alert:">Selected file for upload size is below min limit</error>
+	<error code="apc9" title="Alert:">There seems to be a problem with your Internet connection.  Please reconnect and try again.  Could not reach URL.</error>
+	<error code="apc14" title="Alert:">Server session expired. Please try again.</error>
+	
+	<!-- FLASH 9 TEMPLATE ERRORS -->
+	<error code="f9t100" title="Alert:">You must create an audio message prior to sending or posting your message. Please create audio using one of the available options.</error>
+	<error code="f9t101" title="Alert:">You already posted this message. Please create a new message if you want to post again.</error>
+	<error code="f9t102" title="Alert:">Posting is reserved for content with original audio. Please create your own audio track by using the Text To Speech, Phone or Microphone options.</error>
+	<error code="f9t103" title="Alert:">You must upload a photo before sending or posting this message.</error>
+	<error code="f9t104" title="Confirmation:">Email sent successfully.</error>
+	<error code="f9t105" title="Alert:">Thank you. Selected messages will be posted within 48 hours of submission.</error>
+	<error code="f9t106" title="Alert:">Invalid FROM e-mail address</error>
+	<error code="f9t107" title="Alert:">Invalid TO e-mail address</error>
+	<error code="f9t108" title="Alert:">Invalid FROM name</error>
+	<error code="f9t109" title="Alert:">Invalid TO name</error>
+	<error code="f9t110" title="Alert:">Invalid message</error>
+	<error code="f9t111" title="Alert:">You must specify an address to send the message to.</error>
+	<error code="f9t112" title="Alert:">Invalid message</error>
+	<error code="f9t113" title="Alert:">Unable to load embed code.</error>	
+	<error code="f9t114" title="Alert:">You have reached your limit of {maxEmails} recipients.</error>
+	<error code="f9t115" title="Alert:">Your audio was has been successfully sent to your phone.</error>
+	<error code="f9t120" title="Alert:">Please enter a valid email address.</error>
+	<error code="f9t121" title="Alert:">Your password is invalid.  Please enter a valid password</error>
+	<error code="f9t122" title="Alert:">International domains are not yet supported</error>
+	<error code="f9t123" title="Alert:">Your request could not be processed, please try again.</error>
+	<error code="f9t124" title="Alert:">We were unable to access your contacts, please try again.</error>
+	<error code="f9t125" title="Alert:">There seems to be a problem with your Internet connection.  Please reconnect and try again.  There was an error accessing your contacts.</error>
+	<error code="f9t126" title="Alert:">Please select a provider first.</error>
+	<error code="f9t130" title="Alert:">Unable to load gallery topics.</error>
+	<error code="f9t150" title="Alert:">Click OK to continue...</error>
+	<error code="f9t160" title="Alert:">Error loading server info XML</error>
+	<error code="f9t161" title="Alert:">There was an error loading this model.  Please reload the application.  Details: {details}</error>
+	<error code="f9t200" title="Alert:">Camera not available.</error>
+	<error code="f9t201" title="Alert:">Error capturing image.</error>
+	<error code="f9t202" title="Alert:">Please select gender</error>
+	<error code="f9t203" title="Alert:">There seems to be a problem with your Internet connection.  Please reconnect and try again.  Error loading autophoto XML.</error>
+	<error code="f9t204" title="Alert:">Your photo has expired. Please submit the photo again.</error>
+	<error code="f9t205" title="Alert:">Your camera model is not supported by Adobe.</error>
+	<error code="f9t210" title="Alert:">Please select an image.</error>
+	<error code="f9t211" title="Alert:">There seems to be a problem with your Internet connection.  Please reconnect and try again.  Error loading image search XML.</error>
+	<error code="f9t212" title="Alert:">No image results</error>
+	<error code="f9t213" title="Alert:">Could not decode Google API string</error>
+	<error code="f9t214" title="Alert:">Flickr API Error - could not load photos.</error>
+	<error code="f9t215" title="Alert:">You will lose your uploaded photo. Would you like to proceed?</error>
+	<error code="f9t216" title="Alert:">The search text box is blank.  Please enter a search term.</error>
+	<error code="f9t217" title="Alert:">The username text box is blank.  Please enter your user name.</error>
+	<error code="f9t218" title="Alert:">We could not access your photobucket images.  Please check your username.</error>
+	<error code="f9t219" title="Alert:">We could not access your Facebook images.  Please make sure you are logged in.</error>
+	<error code="f9t220" title="Alert:">We could not retrieve your Facebook images.  Please make sure you are tagged in your photos.</error>
+	<error code="f9t221" title="Alert:">You must be logged in to Facebook to import your images.  Please log in, then press OK.</error>
+	<error code="f9t300" title="Alert:">There seems to be a problem with your Internet connection.  Please reconnect and try again.  Error loading accessory XML.</error>
+	<error code="f9t310" title="Alert:">Error loading background list.</error>
+	<error code="f9t311" title="Alert:">Could not load background.</error>
+	<error code="f9t312" title="Alert:">Error cropping background.</error>
+	<error code="f9t313" title="Alert:">No backgrounds available.</error>
+	<error code="f9t320" title="Alert:">Nothing available to color.</error>
+	<error code="f9t330" title="Alert:">Please enter some text.</error>
+	<error code="f9t331" title="Alert:">You cannot use the word {badWord}. Please try with a different word.</error>
+	<error code="f9t340" title="Alert:">Please enter a phone number.</error>
+	<error code="f9t341" title="Alert:">The phone session has timed out.</error>
+	<error code="f9t342" title="Alert:">You Have Not Saved Your Phone Recording Properly. Please Try Again.</error>
+	<error code="f9t343" title="Alert:">There seems to be a problem with your Internet connection.  Please reconnect and try again.  Error Loading OTC.</error>
+	<error code="f9t344" title="Alert:">Authentication failed</error>
+	<error code="f9t350" title="Alert:">There seems to be a problem with your Internet connection.  Please reconnect and try again.  Error Loading ORC.</error>
+	<error code="f9t351" title="Alert:">There seems to be a problem with your Internet connection.  Please reconnect and try again.  Error Loading ORC URL.</error>
+	<error code="f9t360" title="Alert:">There seems to be a problem with your Internet connection.  Please reconnect and try again.  Error loading account audio XML.</error>
+	<error code="f9t361" title="Alert:">You must select a prerecorded audio before pressing save</error>
+	<error code="f9t370" title="Alert:">There seems to be a problem with your Internet connection.  Please reconnect and try again.  Error loading model XML.</error>
+	<error code="f9t380" title="Alert:">There seems to be a problem with your Internet connection.  Please reconnect and try again.  Error loading text-to-speech voice XML.</error>
+	<error code="f9t400" title="Alert:">No videos to process.</error>
+	<error code="f9t401" title="Alert:">There seems to be a problem with your Internet connection.  Please reconnect and try again.  Error loading session ID XML.</error>
+	<error code="f9t402" title="Alert:">There seems to be a problem with your Internet connection.  Please reconnect and try again.  Error loading APS Status XML.</error>
+	<error code="f9t403" title="Alert:">Your video has expired</error>
+	<error code="f9t404" title="Alert:">There seems to be a problem with your Internet connection.  Please reconnect and try again.  Error uploading data.</error>
+	<error code="f9t504" title="Alert:">Invalid image URL returned by upload script</error>
+	<error code="f9t505" title="Alert:">Security error while trying to capture image</error>
+	<error code="f9t506" title="Alert:">An upload is already in progress.  Please wait for that upload to finish.</error>
+	<error code="f9t510" title="Alert:">There was an error saving the model - saving process timed out.</error>
+	<error code="f9t511" title="Alert:">There seems to be a problem with your Internet connection.  Please reconnect and try again.  Could not load sending script.</error>
+	<error code="f9t512" title="Alert:">Sending script returned no data</error>
+	<error code="f9t513" title="Alert:">Sending script returned improper data</error>
+	<error code="f9t514" title="Alert:">There seems to be a problem with your Internet connection.  Please reconnect and try again.  Error uploading character (oa1) file.</error>
+	<error code="f9t515" title="Alert:">OA1 upload script returned invalid URL: {url}.</error>
+	<error code="f9t520" title="Alert:">There seems to be a problem with your Internet connection.  Please reconnect and try again.  Error downloading file.</error>
+	<error code="f9t521" title="Alert:">Unable to call download video script</error>
+	<error code="f9t522" title="Alert:">Unable to get download video poll response</error>
+	<error code="f9t523" title="Alert:">Download video APS Error : {message}</error>
+	<error code="f9t524" title="Alert:">Are you sure this message should be flagged as inappropriate?</error>
+	<error code="f9t525" title="Alert:">Posting to YouTube cannot open.</error>
+	<error code="f9t526" title="Alert:">Please enter a valid email or leave blank.</error>
+	<error code="f9t527" title="Alert:">Thank you for posting.  Your video will be posted withing 48 hours.  You will be notified by email if one was provided.</error>
+	<error code="f9t528" title="Alert:">Error posting.</error>
+	<error code="f9t529" title="Alert:">The message has not changed.  This scene has already been scheduled for posting.</error>
+	<error code="f9t530" title="Alert:">Cannot resend this message.</error>
+	<error code="f9t531" title="Alert:">Autophoto could not be loaded at the moment.  Please try again later.</error>
+	<error code="f9t532" title="Alert:">Could not process your request at this time.</error>
+	<error code="f9t533" title="Alert:">Unable to save at this time.</error>
+	<error code="f9t534" title="Alert:">Please enter your name.</error>
+	<error code="f9t535" title="Alert:">Please enter recipients name.</error>
+	<error code="f9t536" title="Alert:">This feature is not available.</error>
+	<error code="f9t537" title="Alert:">Webcam Initialization Information.</error>
+	<error code="f9t538" title="Alert:">Your recording contains nothing but silence.  Please check your mic connection and configuration.</error>
+	<error code="f9t539" title="Alert:">MoGreet data has been posted.</error>
+	<error code="f9t540" title="Alert:">Error posting to MoGreet.</error>
+	<error code="f9t541" title="Alert:">Please enter a valid phone number to post to MoGreet.</error>
+	<error code="f9t542" title="Alert:">Click OK to continue.</error> <!-- alert in case throttling is checked and action needs to happen on a mouse click -->
+	<error code="f9t544" title="Alert:">Your computer does not support microphone recording.</error> <!-- ors generated error indicating that no sound card is available -->
+	<error code="f9t545" title="Alert:">Unable to playback message.</error> <!-- failure to load the MID in the big show -->
+	<error code="f9t546" title="Alert:">Please select the file(s) for uploading.</error> <!-- prompt to upload a file while the user browses for a file -->
+	<error code="f9t547" title="Alert:">Error loading canned audios.</error> <!-- Error which occurred when getAudios xml failed to load -->
+	<error code="f9t548" title="Alert:">Error loading TTS data.</error> <!-- error downloading the tts voices xml -->
+	<error code="f9t549" title="Alert:">Error loading popular media.</error> <!-- error connecting to the popular media script -->
+	<error code="f9t550" title="Alert:">Error loading captcha.</error> <!-- error loading the captcha swf -->
+	<error code="f9t551" title="Alert:">Error sending audio to Jaduka.</error> <!-- error loading the jaduka script -->
+	<error code="f9t552" title="Bitly URL:">Click ok to copy this url: {url}</error>
+	<error code="f9t553" title="Copy Embed Code:">{embed}</error>
+	<error code="f9t554" title="Copy Playback URL:">{url}</error>
+	<error code="f9t555" title="Alert">There are no facebook friends available.</error> <!-- no friends from facebook connect -->
+	
+	<!-- POPULAR MEDIA ERROR CODES -->
+	<error code="pop_0001" title="Alert:">We could not retrieve your contacts at this time.  Please try again.</error> <!-- 0001 - missing method -->
+	<error code="pop_0002" title="Alert:">We could not retrieve your contacts at this time.  Please try again.</error> <!-- 0002 - missing version -->
+	<error code="pop_0003" title="Alert:">We could not retrieve your contacts at this time.  Please try again.</error> <!-- 0003 - missing web_service_api_key -->
+	<error code="pop_0004" title="Alert:">We could not retrieve your contacts at this time.  Please try again.</error> <!-- 0004 - missing contact_provider_id -->
+	<error code="pop_0005" title="Alert:">Invalid Email.  Please verify ands try again.</error> <!-- 0005 - missing missing user_email_address -->
+	<error code="pop_0006" title="Alert:">Invalid password.  Please verify ands try again.</error> <!-- 0006 - missing missing user_email_password -->
+	<error code="pop_0101" title="Alert:">We could not retrieve your contacts at this time.  Please try again.</error> <!-- 0101 - invalid method specified -->
+	<error code="pop_0102" title="Alert:">We could not retrieve your contacts at this time.  Please try again.</error> <!-- 0102 - invalid version specified -->
+	<error code="pop_0103" title="Alert:">We could not retrieve your contacts at this time.  Please try again.</error> <!-- 0103 - invalid web_service_api_key specified -->
+	<error code="pop_0104" title="Alert:">We could not retrieve your contacts at this time.  Please try again.</error> <!-- 0104 - invalid contact_provider_id specified -->
+	<error code="pop_0105" title="Alert:">Invalid Email.  Please verify ands try again.</error> <!-- 0105 - invalid user_email_address specified -->
+	<error code="pop_0106" title="Alert:">Invalid password.  Please verify ands try again.</error> <!-- 0106 - invalid user_email_password specified -->
+	<error code="pop_1000" title="Alert:">We could not retrieve your contacts at this time.  Please try again.</error> <!-- 1000 - unable to connect to contact provider -->
+	<error code="pop_2000" title="Alert:">Invalid login.  Please verify and try again.</error> <!-- 2000 - unable to verify user account -->
+	<error code="pop_3000" title="Alert:">We could not retrieve your contacts at this time.  Please try again.</error> <!-- 3000 - unable to provide contacts -->
+	<error code="pop_9000" title="Alert:">We could not retrieve your contacts at this time.  Please try again.</error> <!-- 9000 - errors encountered during processing -->
+	<error code="pop_9101" title="Alert:">Invalid login.  Please verify and try again.</error> <!-- 9101 - BadAuthentication -->
+	<error code="pop_9102" title="Alert:">Invalid login.  Please verify and try again.</error> <!-- 9102 - BadAuthentication -->
+	
+	<!-- PHP ERRORS -->
+	<error code="100" title="Alert:">Please provide name and email.</error>
+	<error code="105" title="Alert:">Could not process your file. Please try again with a different file.</error>
+	<error code="134" title="Alert:">The file was not successfully uploaded. Please check your connection and try again.</error>
+	<error code="207" title="Alert:">Captcha error: The confirmation code you entered was incorrect.  Please try again.</error>
+	<error code="316" title="Alert:">The dimensions of the image you have uploaded are too large. The maximum allowed size is 5000 X 5000 pixels.</error>
+	<error code="317" title="Alert:">The dimensions of the image you have uploaded are too small. The minimum allowed size is 64 X 64 pixels.</error>
+	<error code="320" title="Alert:">Temporary problem. Please try again.</error>
+	<error code="321" title="Alert:">Unable to download file. Please try another.</error>
+	<error code="360" title="Alert:">The file appears to be corrupt. Please try again with a different file.</error>
+	<error code="400" title="Alert:">Your request was not processed successfully. Please try again.</error>
+	<error code="610" title="Alert:">The call being made cannot be completed. Please try again later.</error>
+	
+	<!-- FILE UPLOAD ERRORS -->
+	<error code="fue001" title="Alert:">The file you have uploaded is too small. The minimum allowed size is {minSizeKb} KB.</error>
+	<error code="fue002" title="Alert:">The file you have uploaded is too large. The maximum allowed size is {maxSizeMb} MB.</error>
+	<error code="fue003" title="Alert:">Please check that the file you are uploading is not being used exclusively by another application, and your internet connection is active.</error>
+	<error code="fue004" title="Alert:">Error opening browse window for file upload</error>
+	<error code="fue005" title="Alert:">The file you selected cannot be read.  Please check to make sure it is not corrupt or empty.</error>
+	<error code="fue006" title="Alert:">File upload has timed out.  Please try again with a smaller file or a faster connection.</error>
+	<error code="fue007" title="Alert:">Please select less than {max_files} files to upload.</error>
+	
+</data>

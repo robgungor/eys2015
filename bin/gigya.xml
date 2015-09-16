@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+
+
+
+
+									NOTE NOTE NOTE NOTE
+									
+									
+										for the TEMPLATE, any change you make here will be overwritten in the next
+										deployment... instead send change requests to Mihai to update the source
+
+
+
+
+
+
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--	GENERAL NOTES     
+	* if you have a value in the XML it will be applied to the config object
+    * the param will be ignored if the value is left blank
+    * the param value will be escaped if the ESCATED is 'true' lowercase
+	* ESCAPED="true" should be added if the value needs to be unescaped in the flash
+-->
+
+<data>
+	<!-- (Optional) XML String that defines the UI look and feel. as well as the destination locations. -->
+	<!-- <config><display showEmail="false" useTransitions="true" showBookmark="true" networksToHide="orkut,wordpress,livejournal,piczo,friendster,livedoor,yahoo,live spaces,eons" bookmarksToHide="blinklist,technorati,fark,ask,backflip,sphinn,yardbarker" /></config> -->
+		<PARAM NAME="UIConfig"><![CDATA[<config baseTheme="v2"><display showEmail="false" showBookmark="true" codeBoxHeight="auto" bookmarksToHide="blinklist,technorati,fark,ask,backflip,sphinn,yardbarker" networksToHide="eons, orkut, wordpress, livejournal, piczo, friendster, livedoor, yahoo, livespaces" networksToShow="myspace, facebook, bebo, tagged, blogger, hi5, freewebs, blackplanet, myyearbook, vox, typepad, xanga, multiply, igoogle, netvibes, pageflakes, migente, twitter, ameba, overblog, *"></display><body><controls><snbuttons iconsOnly="true"></snbuttons></controls></body></config>]]></PARAM>
+	
+	<!-- (optional) language code used to change the UI language http://wiki.gigya.com/040_Wildfire_API/040_Developer_Guide/020_UI_Parameters/040_Languages_Support -->
+		<PARAM NAME="lang">en</PARAM>
+	
+	<!-- The Facebook default newsfeed image. maximum with is 160 pixels.
+			if a relative path is defined it will be appended to the value from getWorkshopInfo[DOORCONTENT] stem
+				eg:	misc/Flo_thumbnail_160.jpg WILL BECOME http://content.oddcast.com/ccs6/customhost/599/misc/Flo_thumbnail_160.jpg -->
+		<PARAM NAME="facebookPreviewURL3"></PARAM>
+	
+	<!-- (Mandatory max 50 characters)  Title given to the widget when shared -->
+		<PARAM NAME="widgetTitle">Enter Title Here</PARAM>
+		
+	<!-- (Optional)  Widget description in facebook etc... -->
+		<PARAM NAME="widgetDescription">Enter Description Here</PARAM>
+		
+	<!-- (Mandatory)  The Default widget preview image Should be the same size as the widget. -->
+		<PARAM NAME="defaultPreviewURL"></PARAM>
+		
+	<!-- forces posting to go into the feed not the myStuff section -->
+		<PARAM NAME="useFacebookMystuff">false</PARAM>
+		
+	<!-- [APPID - LOC(staging OR Live) - APP NAME] Defines the Unique name of the Project -->
+	<!-- DEFAULT IS IN THE FLASH, but can be overwritten here so leave blank to be dynamically added in flash -->
+		<PARAM NAME="CID"></PARAM>
+		
+	<!-- Allows Gigya to handle advanced tracking of the widget -->
+		<PARAM NAME="advancedTracking">true</PARAM>
+		
+	<!-- Always the same Partner ID. -->
+		<PARAM NAME="partner">975072</PARAM>	
+		
+	<!-- swf embed parameters not applied to the config object -->
+	<!-- these are all mandatory and need NOT be blank -->
+	<!-- if the value is escaped, add ESCAPED="true" -->
+		<EMBED_PARAM NAME="width">300</EMBED_PARAM>
+		<EMBED_PARAM NAME="height">400</EMBED_PARAM>
+		<EMBED_PARAM NAME="quality">high</EMBED_PARAM>
+		<EMBED_PARAM NAME="allowScriptAccess">always</EMBED_PARAM>
+		<EMBED_PARAM NAME="allowNetworking">all</EMBED_PARAM>
+		<EMBED_PARAM NAME="wmode">opaque</EMBED_PARAM>
+		<EMBED_PARAM NAME="allowFullScreen">true</EMBED_PARAM>
+		<EMBED_PARAM NAME="name">widget_name</EMBED_PARAM>
+		<!-- which swf to embed, options are [player,player_html,workshop] -->
+			<EMBED_PARAM NAME="swf_to_embed">player</EMBED_PARAM>
+</data>

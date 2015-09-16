@@ -1,0 +1,1013 @@
+﻿art_swc.swf Movie Report
+-------------------------
+
+Frame #    Frame Bytes    Total Bytes    Scene
+-------    -----------    -----------    -----
+      1        1434963        1434963    Scene 1 (AS 3.0 Classes Export Frame)
+
+Scene      Shape Bytes    Text Bytes    ActionScript Bytes
+-------    -----------    ----------    ------------------
+Scene 1              0             0                328712
+
+Symbol                                              Shape Bytes    Text Bytes    ActionScript Bytes
+------------------------------------------------    -----------    ----------    ------------------
+---------------------------------                             0             0                     0
+_debugMC                                                      0            29                     0
+5y4r5haetrh                                                   0             0                     0
+Accessories_TileList_Acc_CellRenderer_UI                      0             0                     0
+oc_panels_model_thumb_loading                                 0             0                     0
+oc_ui_thumb_placeholder                                     150             0                     0
+Accessories_TileList_Group_CellRenderer_UI                    0            35                     0
+Accessories_UI                                                0             0                     0
+TileList                                                      0             0                     0
+oc_panels_closeBtn                                          160             0                     0
+oc_panels_generic_bg                                          0             0                     0
+oc_blocker_fullscreen                                         0             0                     0
+Alert_UI                                                      0           191                     0
+UIScrollBar                                                   0             0                     0
+title_facebook share confirm                                  0            58                     0
+Button                                                        0             0                     0
+btn_x                                                      1095            54                     0
+btn_ok                                                       59            58                     0
+title_alert                                                   0            33                     0
+popupBG-small                                               127             0                     0
+Shade                                                         0             0                     0
+arrow_btn                                                   105             0                     0
+Audio_To_Phone_UI                                             0             0                     0
+oc_panel_audioToPhone_loadingBar                              0             0                     0
+oc_panels_phone_combo_item                                    0             0                     0
+oc_panels_phone_combo                                         0             0                     0
+btn_generic                                                 186             0                     0
+oc_placeholder                                                0             0                     0
+btn_refresh                                                   0             0                     0
+Audio_Volume_UI                                               0             0                     0
+oc_panels_audiovolume_slider                                  0             0                     0
+oc_panels_audiovolume_mute_art                                0             0                     0
+authored_creation art                                         0             0                     0
+autophoto_head_mask                                           0             0                     0
+autophoto_placeholder_bmp                                    51             0                     0
+AutoPhoto_Search_CellRenderer_UI                              0            55                     0
+jfgjad                                                        0             0                     0
+autoPhotoMask                                               112             0                     0
+Background_Selector_UI                                        0             0                     0
+oc_panels_bg_thumb                                            0             0                     0
+oc_ui_selector                                                0             0                     0
+oc_panels_bg_arrowBtn                                         0             0                     0
+Background_Type_Selector_UI                                   0             0                     0
+test_radioButton                                             51             0                     0
+BG_Browse_UI                                                  0             0                     0
+Bg_Position                                                   0            67                     0
+oc_movezoom_slider                                            0             0                     0
+oc_movezoom_resetBtn                                         58            68                     0
+oc_movezoom_zoomInBtn                                       141             0                     0
+oc_movezoom_zoomOutBtn                                      104             0                     0
+oc_movezoom_rotateBtn                                       242             0                     0
+btfgbtfb copy                                                95             0                     0
+oc_movezoom_arrowBtn                                        195             0                     0
+bigshow_bgMore                                                0             0                     0
+BigShow_UI                                                    0             0                     0
+btn_video-play_big                                          306             0                     0
+VideoControls_UI                                              0             0                     0
+video-border                                                 92             0                     0
+fullframe_border                                             75             0                     0
+bigshow_videoMaskBig                                          0             0                     0
+bigshow_videoMask                                             0             0                     0
+video_container                                              51             0                     0
+Elf Yourself logo btn                                         0             0                     0
+btn_createyourown                                            59           102                     0
+BigShowUI                                                    94             0                     0
+btn_video-play                                              114             0                     0
+btn_video-reset                                             204             0                     0
+btn_video-volume_on                                         389             0                     0
+title_bigshow                                                 0           122                     0
+Browse_UI                                                     0           288                     0
+close_btn                                                   365             0                     0
+btn_browse                                                  118            70                     0
+fgrtgtgb                                                     74             0                     0
+uploadyourphoto_title                                         0           102                     0
+btn_upload                                                    0            70                     0
+oc_panels_auto_photo_example                                  0             0                     0
+btn - back                                                    0             0                     0
+btn logout                                                    0            35                     0
+btn_arrow                                                     0             0                     0
+btn_back2                                                     0             0                     0
+btn_BASE                                                     55             0                     0
+btn_brushedgold                                               0             0                     0
+btn_capture                                                   0            72                     0
+btn_capture2                                                  0            50                     0
+btn_clear                                                    56            66                     0
+btn_clear2                                                    0             0                     0
+btn_contest                                                  43           207                     0
+btn_contine2                                                 37            52                     0
+btn_copyurl2                                                  0             0                     0
+btn_create_your_own                                           0             0                     0
+btn_createanother                                           118            86                     0
+btn_createyourown2                                            0             0                     0
+btn_mute2                                                   343             0                     0
+btn_mute2b                                                  358             0                     0
+btn_mywall                                                    0            98                     0
+btn_new_search                                                0            37                     0
+BTN_green                                                   171             0                     0
+BTN_red                                                     171             0                     0
+btn_post2                                                    44            46                     0
+btn_preview                                                   0             0                     0
+btn_privacypolicy                                             0             0                     0
+btn_replay                                                    0            70                     0
+btn_reset2                                                    0             0                     0
+btn_sceneselect                                               0             0                     0
+btn_sceneselect 3                                             0             0                     0
+btn_sceneselect01                                            79             0                     0
+btn_sceneselect02                                            79             0                     0
+btn_sceneselect03                                           110             0                     0
+btn_send2                                                     0             0                     0
+btn_stop                                                      0             0                     0
+btn_stopdance                                                 0            58                     0
+btn_store-download                                           59            38                     0
+btn_terms                                                   139           142                     0
+btn_termsofuse                                               31             0                     0
+btn_uploadfromfacebook2                                       0             0                     0
+btn_uploadphoto                                              30             0                     0
+btn_uploadphoto2                                              0             0                     0
+btn_useyourwebcam2                                            0             0                     0
+btn_watchyourdance2                                           0            67                     0
+BtnBack                                                     118            64                     0
+BtnCopyToClipboard                                           43           108                     0
+Button_disabledSkin                                         242             0                     0
+Button_downSkin                                             284             0                     0
+Button_emphasizedSkin                                       146             0                     0
+Button_overSkin                                             264             0                     0
+Button_selectedDisabledSkin                                 217             0                     0
+Button_selectedDownSkin                                     215             0                     0
+Button_selectedOverSkin                                     216             0                     0
+Button_selectedUpSkin                                       217             0                     0
+Button_upSkin                                               293             0                     0
+focusRectSkin                                                 0             0                     0
+Component_avatar                                             33             0                     0
+btn_x                                                      1095            54                     0
+btn_clear                                                    56            66                     0
+BTN_red X                                                   178             0                     0
+BTN_green X                                                 177             0                     0
+btn_ok                                                       59            58                     0
+btn_dance-80s                                                 0            96                     0
+btn_dance-80s-over                                            0            35                     0
+btn_dance-charlston-over                                      0            39                     0
+btn_dance-classic-over                                        0            35                     0
+btn_dance-elfspanol-over                                     35            37                     0
+btn_dance-elftronic-over                                      0            28                     0
+btn_dance-hiphop-over                                         0            35                     0
+btn_dance-honkytonk-over                                      0            39                     0
+btn_dance-officeparty-over                                  264            43                     0
+btn_dance-soul-over                                           0            30                     0
+btn_dance_80s                                                 0            70                     0
+btn_dance_charleston                                          0            78                     0
+btn_dance_classic                                             0            70                     0
+btn_dance_elfspanol                                          35            74                     0
+btn_dance_elftronic                                           0            56                     0
+btn_dance_hiphop                                              0            70                     0
+btn_dance_honkytonk                                           0            78                     0
+btn_dance_officeparty                                         0            86                     0
+btn_dance_soul                                                0            60                     0
+btn_video-play                                              114             0                     0
+btn_video-play_big                                          306             0                     0
+btn_video-reset                                             204             0                     0
+btn_video-volume_on                                         389             0                     0
+btn_addanother-anotherelf                                     0            92                     0
+btn_video-pause                                              73             0                     0
+btn_back                                                    118             0                     0
+btn_capture                                                   0            72                     0
+btn_next                                                      0            64                     0
+btn_retake                                                    0            70                     0
+btn_capture                                                   0            72                     0
+btn_store-merch                                               0            78                     0
+btn_video-volume_off                                        240             0                     0
+btn_share-facebook                                            0             0                     0
+btn_share-twitter                                             0             0                     0
+btn_addanother-selectdance                                    0            92                     0
+btn_confirm                                                 118            72                     0
+btn_x                                                      1095            54                     0
+btn_store-calendar                                           59            94                     0
+btn_replay                                                    0            70                     0
+btn_x                                                      1095            54                     0
+btn_ok                                                       59            58                     0
+btn_store-calendar                                           59            94                     0
+btn_store-merch                                               0            78                     0
+btn_ok_fake                                                   0             0                     0
+btn_ok                                                       59            58                     0
+btn_x                                                      1095            54                     0
+btn_reset                                                     0             0                     0
+btn_rotate                                                  108             0                     0
+btn_zoom-                                                     0             0                     0
+btn_zoom+                                                     0             0                     0
+btn_dance-charlston                                           0           131                     0
+btn_dance-singing                                           296           115                     0
+btn_t&c                                                       0           106                     0
+btn_upload-desktop                                           61           120                     0
+btn_upload-facebook                                           0            62                     0
+btn_upload-webcam                                             0           108                     0
+btn_share-pintrest                                            0             0                     0
+btn_share-email                                               0             0                     0
+btn_share-embed                                               0             0                     0
+btn_share-link                                                0             0                     0
+btn_video-fullscreen                                        103             0                     0
+btn_video-regscreen                                         102             0                     0
+btn_send                                                      0            64                     0
+Canned_Audio_UI                                               0             0                     0
+Canned_Audios_Selector_Item_Art                               0             0                     0
+Canned_Audios_TileList_Item_UI                                0             0                     0
+Canned_Audios_TileList_Item_UI_icon                           0             0                     0
+Canned_Audios_TileList_Item_UI_btn                            0             0                     0
+Capture_btn                                                   0             0                     0
+check                                                         0             0                     0
+clear_btn                                                     0             0                     0
+Color_UI                                                      0             0                     0
+oc_panels_color_groupBtn                                      0             0                     0
+oc_panels_color_arrowBtn                                      0             0                     0
+oc_ui_cpV2                                                    0             0                     0
+ComboBox                                                      0             0                     0
+ComboBox_upSkin                                             269             0                     0
+ComboBox_disabledSkin                                       268             0                     0
+ComboBox_overSkin                                           318             0                     0
+ComboBox_downSkin                                           316             0                     0
+TextInput                                                     0             0                     0
+List                                                          0             0                     0
+ComingSoon_UI                                                 0           208                     0
+CellRenderer                                                  0             0                     0
+CellRenderer_disabledSkin                                    79             0                     0
+CellRenderer_downSkin                                         0             0                     0
+CellRenderer_overSkin                                         0             0                     0
+CellRenderer_upSkin                                           0             0                     0
+CellRenderer_selectedDisabledSkin                             0             0                     0
+CellRenderer_selectedDownSkin                                 0             0                     0
+CellRenderer_selectedOverSkin                                 0             0                     0
+CellRenderer_selectedUpSkin                                   0             0                     0
+List_skin                                                   101             0                     0
+ScrollBar                                                     0             0                     0
+ScrollTrack_skin                                            111             0                     0
+ScrollArrowUp_downSkin                                      111             0                     0
+ScrollArrowDown_downSkin                                    110             0                     0
+ScrollThumb_downSkin                                        163             0                     0
+ScrollArrowDown_overSkin                                    110             0                     0
+ScrollThumb_overSkin                                        162             0                     0
+ScrollArrowUp_overSkin                                      110             0                     0
+ScrollArrowUp_upSkin                                          0             0                     0
+ScrollThumb_upSkin                                          205             0                     0
+ScrollArrowDown_upSkin                                      110             0                     0
+ScrollArrowDown_disabledSkin                                  0             0                     0
+ScrollArrowUp_disabledSkin                                  110             0                     0
+ScrollBar_thumbIcon                                          75             0                     0
+ScrollArrowDown_icon                                          0             0                     0
+arrowIcon                                                    43             0                     0
+ScrollArrowUp_icon                                            0             0                     0
+ScrollPane_disabledSkin                                       0             0                     0
+panelBackground_Base                                         46             0                     0
+panelBackground_Shadow                                       45             0                     0
+ScrollPane_upSkin                                             0             0                     0
+TextInput_disabledSkin                                      102             0                     0
+TextInput_upSkin                                            104             0                     0
+TileList_skin                                                 0             0                     0
+continue_btn                                                  0             0                     0
+CopyURLUI                                                     0           186                     0
+countdown                                                     0             0                     0
+Custom_CellRenderer_Art                                      75           510                     0
+Custom_CellRenderer_disabledSkin                              0             0                     0
+Custom_CellRenderer_downSkin                                  0             0                     0
+Custom_CellRenderer_overSkin                                124             0                     0
+Custom_CellRenderer_selectedDisabledSkin                      0             0                     0
+Custom_CellRenderer_selectedDownSkin                          0             0                     0
+Custom_CellRenderer_selectedOverSkin                          0             0                     0
+Custom_CellRenderer_selectedUpSkin                            0             0                     0
+Custom_CellRenderer_upSkin                                  126             0                     0
+Custom_ComboBox_Art                                          65           275                     0
+Custom_ComboBox_disabledSkin                                268             0                     0
+Custom_ComboBox_downSkin                                    316             0                     0
+Custom_ComboBox_overSkin                                    318             0                     0
+Custom_ComboBox_upSkin                                        0             0                     0
+Custom_List_Art                                               0             0                     0
+Custom_List_skin                                              0             0                     0
+Custom_List_Art copy                                         66            63                     0
+Custom_ScrollArrowDown_disabledSkin                           0             0                     0
+Custom_ScrollArrowDown_downSkin                               0             0                     0
+Custom_ScrollArrowDown_overSkin                              27             0                     0
+Custom_ScrollArrowDown_upSkin                                27             0                     0
+Custom_ScrollArrowUp_disabledSkin                            28             0                     0
+Custom_ScrollArrowUp_downSkin                                 0             0                     0
+Custom_ScrollArrowUp_overSkin                                27             0                     0
+Custom_ScrollArrowUp_upSkin                                  27             0                     0
+Custom_Scrollbar_Art                                        109           255                     0
+Custom_ScrollBar_thumbIcon                                    0             0                     0
+Custom_ScrollThumb_downSkin                                   0             0                     0
+k7itymndtyjhnt6                                              47             0                     0
+Custom_ScrollThumb_overSkin                                   0             0                     0
+k7itymndtyjhnt6 copy                                         27             0                     0
+Custom_ScrollThumb_upSkin                                     0             0                     0
+Custom_ScrollTrack_disabledSkin                               0             0                     0
+Custom_ScrollTrack_skin                                       0             0                     0
+rthathtg                                                    130             0                     0
+DanceButton_1                                               147             0                     0
+DanceButton_2                                               147             0                     0
+DanceButton_3                                               147             0                     0
+DancersPlacehold_UI                                           0             0                     0
+face                                                        213            39                     0
+debugMC_testBtns                                              0            99                     0
+default_1                                                     0             0                     0
+default_2                                                     0             0                     0
+default_3                                                     0             0                     0
+default_4                                                     0             0                     0
+default_5                                                     0             0                     0
+dfbdfbdfbdfbv                                                 0             0                     0
+Download_UI                                                  74           647                     0
+invBtn                                                        0             0                     0
+oc_ui_checkbox                                               42             0                     0
+fgrtgtgb copy                                                97             0                     0
+Email_UI                                                    306           592                     0
+oc_ui_scrollbar                                               0             0                     0
+oc_panels_email_recipient                                     0            85                     0
+oc_ui_wrong                                                   0             0                     0
+oc_ui_correct                                               144             0                     0
+popupBG_large                                               167             0                     0
+oc_panels_email_scrollbar                                     0             0                     0
+EmailBtn                                                    211             0                     0
+EmailSuccessWindowUI                                          0           134                     0
+Embed_UI                                                      0           208                     0
+fgrtgtgb copy 2                                              75             0                     0
+Expiration_UI                                                33            44                     0
+oc_expiry_oddcastBtn                                         66            51                     0
+faceAnime_faceHolder ---sharing                               0             0                     0
+Facebook_Connect_Account_Info_UI                              0            79                     0
+oc_fbonnect_thumb_icon                                        0             0                     0
+oc_fbconnect_logoutBtn                                       52            35                     0
+oc_fbconnect_thumb                                          129             0                     0
+Facebook_Connect_Status_UI                                    0             0                     0
+oc_fbconnect_loginBtn                                         0             0                     0
+Facebook_Friends_TileList_CellRenderer_UI                    57            55                     0
+facebook thumb                                                0             0                     0
+thumb_loading_animation                                       0             0                     0
+Facebook_Friends_UI                                         155           319                     0
+FacebookLogoutButton_UI                                       0             0                     0
+FbLogoutBtn_UI                                                0           171                     0
+thththn                                                      27             0                     0
+BTN_grey                                                    171             0                     0
+BTN_blue                                                    171             0                     0
+selectFriendHeader                                            0            64                     0
+Facebook_Friends_Upload_TileList_CellRenderer_UI              0             0                     0
+Facebook_Friends_Upload_UI                                    0             0                     0
+mag                                                           0             0                     0
+generic_btn                                                   0             0                     0
+field                                                         0             0                     0
+Facebook_Post_Friends_TileList_CellRenderer_UI                0            55                     0
+thumb_loading_animation_55                                    0             0                     0
+oc_ui_thumb_placeholder_2                                     0             0                     0
+FacebookBtn                                                1046             0                     0
+FbLogoutInner                                                 0            76                     0
+FaceCutter_UI                                               235             0                     0
+ynatqaetnqertnqe                                            230             0                     0
+Facial_Expressions_UI                                         0             0                     0
+oc_panels_expression_btn                                      0             0                     0
+oc_panels_expression_slider                                   0             0                     0
+oc_panels_expression_arrowBtn                                 0             0                     0
+fb_userphotoplacehold                                         0             0                     0
+FbLogoutInner_underline                                       0             0                     0
+ff_uploadFace                                                 0             0                     0
+ff_uploadFace_face                                            0             0                     0
+ff_uploadFace_face_imageHolder                               28             0                     0
+<Path>                                                        0             0                     0
+<Path>_2                                                      0             0                     0
+<Path>_3                                                      0             0                     0
+<Path>_4                                                      0             0                     0
+<Path>_5                                                      0             0                     0
+<Path>_6                                                      0             0                     0
+<Path>_7                                                      0             0                     0
+<Path>_8                                                      0             0                     0
+<Path>_9                                                      0             0                     0
+Gallery_Post_UI                                               0             0                     0
+oc_panels_post_combo                                          0            66                     0
+oc_panels_email_sendBtn                                       0             0                     0
+jfalkjefa                                                     0             0                     0
+sdfsdfs                                                       0             0                     0
+Generic_btn_1                                                 0             0                     0
+Gigya_UI                                                      0             0                     0
+oc_panels_gigya_placeholder                                   0             0                     0
+jfklsdjf                                                      0             0                     0
+jslkdjfs                                                      0             0                     0
+loading_bar                                                   0             0                     0
+main_bg                                                       0             0                     0
+Main_Loader_UI                                                0           126                     0
+initial loader                                              223             0                     0
+Oddcast logo loader                                           0             0                     0
+loader-swoosh                                                 0             0                     0
+MainPlayerHolder                                              0             0                     0
+preview_bgMore                                                0             0                     0
+VideoEndScreen                                              108           124                     0
+tfgstfghnstf                                                 34             0                     0
+preview_shareBtns                                             0            36                     0
+preview_danceBtns                                           130            51                     0
+MakeAnotherUI                                                 0            55                     0
+MASK_POINT_ART                                               61             0                     0
+Mask_UI                                                       0             0                     0
+oc_autophoto_maskPoint                                       59             0                     0
+oc_panels_auto_photo_apc_placeholer                           0             0                     0
+Message_Player_UI                                             0             0                     0
+oc_message_flagging                                           0             0                     0
+Microphone_UI                                                 0             0                     0
+oc_panels_mic_timer                                           0             0                     0
+oc_panels_mic_controls                                        0             0                     0
+Mode_Selection_UI                                            96           164                     0
+oc_autophoto_Persistant_Image_thumb                           0             0                     0
+MoGreet_UI                                                    0             0                     0
+myspace btn login art                                         0            40                     0
+myspace connect thumb                                         0             0                     0
+Myspace_Connect_Status_Dialogue                               0            41                     0
+myspace_icon                                                173             0                     0
+Myspace_Connect_Status_UI                                     0             0                     0
+oc_autophoto_anchor                                          82             0                     0
+oc_autophoto_persistent_image_btn_select                    153             0                     0
+oc_autophoto_persistent_image_btn_delete                    278             0                     0
+oc_autophoto_sample_ken                                       0             0                     0
+oc_autophoto_sample_photo                                     0             0                     0
+oc_autophoto_step1c_thumb                                     0             0                     0
+oc_blocker                                                    0             0                     0
+oc_blocker_hand                                               0             0                     0
+oc_host_placeholder                                           0             0                     0
+oc_loading_spinner                                            0             0                     0
+oc_loading_spinner_or                                         0             0                     0
+oc_logo                                                       0             0                     0
+oc_logo_gr                                                  757             0                     0
+oc_morph_toggle                                               0             0                     0
+oc_movezoom_slider_dragger                                    0             0                     0
+oc_movezoom_slider_track                                    120             0                     0
+frbsfrb                                                       0             0                     0
+oc_oddcast_main_loader_art                                    0             0                     0
+oc_oddcast_main_loader_art_shape1                             0             0                     0
+oc_oddcast_main_loader_art_shape2                             0             0                     0
+oc_oddcast_main_loader_art_shape3                             0             0                     0
+oc_oddcast_main_loader_art_shape4                             0             0                     0
+oc_panels_acc_groupBtn2                                       0             0                     0
+oc_panels_acc_thumb                                           0             0                     0
+oc_panels_audiovolume_mute_art_loop                           0             0                     0
+oc_panels_audiovolume_mute_loop_art                           0             0                     0
+oc_panels_audiovolume_slider_dragger                          0             0                     0
+oc_panels_audiovolume_slider_track                            0             0                     0
+oc_panels_auto_photo_apc_placeholer_mask                      0             0                     0
+oc_panels_auto_photo_search_bg                                0             0                     0
+oc_panels_auto_photo_webcam_placeholer                       51             0                     0
+oc_panels_color_groupBtn_swatch                               0             0                     0
+oc_panels_email_removeBtn                                    57            34                     0
+oc_panels_email_scrollbar_dragger                             0             0                     0
+oc_panels_email_scrollbar_arrow                               0             0                     0
+oc_panels_email_scrollbar_track                               0             0                     0
+oc_panels_expression_slider_dragger                           0             0                     0
+oc_panels_expression_slider_track                             0             0                     0
+oc_panels_loading                                             0             0                     0
+oc_panels_mic_playPauseBtn                                    0             0                     0
+oc_panels_mic_recToggleBtn                                    0             0                     0
+oc_panels_mic_saveBtn                                         0             0                     0
+oc_panels_mic_processing                                      0             0                     0
+oc_panels_mic_pauseBtn                                        0             0                     0
+oc_panels_mic_playBtn                                         0             0                     0
+oc_panels_mic_recBtn                                          0             0                     0
+oc_panels_mic_stopRecBtn                                      0             0                     0
+oc_panels_mic_timer_bar                                       0             0                     0
+oc_panels_model_arrowBtn                                      0             0                     0
+oc_panels_model_thumb                                         0             0                     0
+circleprocess_stars                                           0             0                     0
+oc_panels_phone_c2cWin                                        0             0                     0
+oc_panels_phone_captchaWin                                    0             0                     0
+oc_panels_phone_combo_dropBox                                 0             0                     0
+oc_panels_phone_combo_btn                                     0             0                     0
+oc_panels_phone_combo_bg                                      0             0                     0
+oc_panels_phone_combo_scrollbar                               0             0                     0
+oc_panels_phone_combo_scrollbar_dragger                       0             0                     0
+oc_panels_phone_combo_scrollbar_arrow                         0             0                     0
+oc_panels_phone_combo_scrollbar_track                         0             0                     0
+oc_panels_phone_connectBtn                                    0             0                     0
+oc_panels_phone_controls                                      0             0                     0
+oc_panels_phone_processing                                    0             0                     0
+oc_panels_phone_dialWin                                       0             0                     0
+oc_panels_post_combo_dropBox                                  0             0                     0
+oc_panels_post_combo_item                                     0            56                     0
+oc_panels_post_combo_btn                                    209             0                     0
+oc_panels_post_combo_bg                                      59             0                     0
+oc_panels_post_scrollbar                                      0             0                     0
+oc_panels_post_scrollbar_dragger                             63             0                     0
+oc_panels_post_scrollbar_arrow                               43             0                     0
+oc_panels_post_scrollbar_track                               41             0                     0
+oc_panels_prerec_playBtn                                      0             0                     0
+oc_panels_prerec_playStopBtn                                  0             0                     0
+oc_panels_prerec_stopBtn                                      0             0                     0
+oc_panels_prerec_saveBtn                                      0             0                     0
+oc_panels_sizing_slider                                       0             0                     0
+oc_panels_sizing_slider_dragger                               0             0                     0
+oc_panels_sizing_slider_track                                 0             0                     0
+oc_panels_tts_combo                                           0             0                     0
+oc_panels_tts_combo_dropBox                                   0             0                     0
+oc_panels_tts_combo_btn                                       0             0                     0
+oc_panels_tts_combo_bg                                        0             0                     0
+oc_panels_tts_combo_scrollbar                                 0             0                     0
+oc_panels_tts_combo_item                                      0             0                     0
+oc_panels_tts_combo_scrollbar_dragger                         0             0                     0
+oc_panels_tts_combo_scrollbar_arrow                           0             0                     0
+oc_panels_tts_combo_scrollbar_track                           0             0                     0
+oc_panels_tts_voiceSelect                                     0             0                     0
+oc_ui_combo_item                                             88            56                     0
+oc_placeholder_art                                            0             0                     0
+oc_placeholder_art copy                                       0             0                     0
+oc_player_bgHolder                                            0             0                     0
+oc_player_bgHolder_2                                          0             0                     0
+oc_player_bgMask                                             32             0                     0
+oc_player_body_mask                                           0             0                     0
+oc_player_dynamicBGMask                                       0             0                     0
+oc_player_dynamicBGMask_pointMC                               0             0                     0
+oc_player_dynamicBGMask_bounds                                0             0                     0
+oc_player_dynamicBGMask_point                                 0             0                     0
+oc_player_dynamicBGMask_point_btn                             0             0                     0
+oc_player_fb_holder                                           0             0                     0
+oc_player_fb_holder_placeholder                               0             0                     0
+oc_player_hostMask                                            0             0                     0
+oc_player_loadingBar                                          0             0                     0
+oc_ui_checkbox_check                                          0             0                     0
+shjrfvb                                                     102             0                     0
+oc_ui_cpV2_swatch                                             0             0                     0
+oc_ui_cpV2_colorBar                                           0             0                     0
+oc_ui_scrollbar_dragger                                      66             0                     0
+oc_ui_scrollbar_arrow                                         0             0                     0
+oc_ui_scrollbar_track                                         0             0                     0
+oc_ui_scrollbar facebook friend                               0             0                     0
+oc_ui_selector_area                                          58             0                     0
+Oddcast_arrows copy                                           0             0                     0
+Oddcast_arrows                                               47             0                     0
+Oddcast_com copy                                              0             0                     0
+Oddcast_com                                                  99             0                     0
+Oddcast_middle                                              307             0                     0
+Overlay                                                       0             0                     0
+Panel_Buttons_UI                                              0             0                     0
+Paypal_UI                                                     0             0                     0
+Persistent_Image_UI                                           0             0                     0
+Phone_UI                                                      0             0                     0
+PhotoMaskingScreen_UI                                      2167           312                     0
+Pin_UI                                                        0           213                     0
+PinProcessing_UI                                              0           189                     0
+circleprocess_anim                                            0             0                     0
+Player_Holder_UI                                              0             0                     0
+Player_UI                                                     0             0                     0
+Points_UI                                                     0             0                     0
+Position_UI                                                 386           283                     0
+gngng                                                       235             0                     0
+slider bar                                                    0             0                     0
+slider                                                        0             0                     0
+frame                                                       101             0                     0
+Small_btns                                                   45             0                     0
+PostToFacebook_UI                                           219           371                     0
+PostToFacebookHeader                                          0            66                     0
+rgbrtfhbthbt                                                  0             0                     0
+yjwsyj                                                        0             0                     0
+gynsrtbsrtb                                                   0             0                     0
+hrthsrth                                                      0             0                     0
+yjwsyj copy                                                   0             0                     0
+rthathnae                                                     0             0                     0
+PreviewEndScreenUI                                          243           161                     0
+title_previewend                                              0           100                     0
+PrintingProcessing_UI                                         0           286                     0
+PrintReady_UI                                                 0           222                     0
+processing circle                                             0             0                     0
+Processing_UI                                                 0           190                     0
+ProgressScrubber_UI                                           0             0                     0
+ProgressScrubProgressBar_IU                                   0             0                     0
+ProgressScrubberTrack_UI                                     31             0                     0
+rjnsrgyjmnyjn                                                51             0                     0
+Scrollbaruparrow                                              0             0                     0
+ScrollPane                                                    0             0                     0
+Search_UI                                                   228           705                     0
+section_1                                                     0             0                     0
+section_2                                                     0             0                     0
+shape                                                         0             0                     0
+ShareLinkBtn                                               2791             0                     0
+shutter_anim                                               1432            81                     0
+shutter_blade1                                               35             0                     0
+shutter_blade2                                               36             0                     0
+shutter_blade3                                               33             0                     0
+shutter_blade4                                               36             0                     0
+shutter_blade5                                               33             0                     0
+shutter_blade6                                               35             0                     0
+starr                                                         0             0                     0
+Symbol 2                                                      0             0                     0
+Symbol 3                                                      0             0                     0
+Symbol 4                                                      0             0                     0
+Symbol 5                                                      0             0                     0
+Symbol 6                                                      0             0                     0
+btfgbtfb                                                     95             0                     0
+r                                                            47             0                     0
+dftgnbtfgbnf                                                  0             0                     0
+fbgbntfg                                                     47             0                     0
+fgb zdfb db                                                  86             0                     0
+hbedrfbdrfb                                                  61             0                     0
+hbedrfbdrfb copy                                             80             0                     0
+hbedrfbdrfb copy 2                                           67             0                     0
+rfbARFbvr                                                    66             0                     0
+star pulse                                                    0             0                     0
+swoosh                                                        0             0                     0
+star                                                          0             0                     0
+star pulse2                                                   0             0                     0
+title_addanother                                              0             0                     0
+title_adjust photo                                            0             0                     0
+title_email                                                  31            94                     0
+title_email confirm                                           0             0                     0
+title_embed                                                   0             0                     0
+title_facebook friend                                         0             0                     0
+title_facebook photo                                          0             0                     0
+title_printproccess                                           0             0                     0
+title_purchase                                                0             0                     0
+title_upload                                                  0             0                     0
+title_url                                                     0             0                     0
+title_webcam                                                  0             0                     0
+title_working on it                                           0             0                     0
+zdfvbzdfb                                                    47             0                     0
+t7ik57ykmuyhm                                                47             0                     0
+TermsConditions_UI                                          227          1958                     0
+uykmdtuymkuyhmk                                              51             0                     0
+thbabr                                                        0             0                     0
+theplay                                                       0             0                     0
+TTS_ComboBox_Art                                              0             0                     0
+TTS_List_cellRenderer_UI                                      0             0                     0
+TTS_UI                                                        0             0                     0
+Tween 1                                                       0             0                     0
+Tween 5                                                       0             0                     0
+Tween 6                                                       0             0                     0
+TwitterBtn                                                 1066             0                     0
+upload_btn_1                                                  0             0                     0
+upload_btn_2                                                  0             0                     0
+upload_btn_3                                                  0             0                     0
+upload_btn_4                                                  0             0                     0
+upload_btn_5                                                  0             0                     0
+upload_btn_third                                              0             0                     0
+Upload_photo_btn                                              0             0                     0
+UploadButtons_UI                                              0             0                     0
+uymdty                                                        0             0                     0
+VHost_Back_Selector_UI                                        0             0                     0
+VHost_Front_Selector_UI                                       0             0                     0
+VHost_Position                                                0             0                     0
+VHost_Proportions_UI                                          0             0                     0
+VHost_Type_Selector_UI                                        0             0                     0
+vid01-thumb_slide                                             0             0                     0
+vid02-thumb_slide                                             0             0                     0
+vid03-thumb_slide                                             0             0                     0
+Webcam_UI                                                    97           124                     0
+WS_Art                                                       55           108                     0
+yhmndyhmdghmghm ghm uyhm                                      0             0                     0
+Youtube_UI                                                    0             0                     0
+fl.core.ComponentShim                                         0             0                     0
+fl.containers.UILoader                                        0             0                     0
+
+Font Name                            Bytes         Characters
+---------------------------------    ----------    ----------
+GothamMedium                               4676     ()+,-./:;ABCEFILMOPRSTUVYabcdefghijklmnoprstuvwyz ’
+Helvetica-Bold Bold                        1126     123Test 
+BookmanOldStyle                              31    
+Helvetica-Condensed-Bold Bold                33    
+GothamBold Bold                             366     ALMWY 
+_sans Bold                                   22    
+Gotham-Medium                             13247     ./0:@ABCDEFHIJKLMNOPRSTUWYZabcdefghijklmnoprstwy 
+HelveticaNeue-Heavy Bold                  10710     !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ ˆ˜–—‘’‚“”„†‡•…‰‹›™
+HelveticaNeue-CondensedObl Italic          2251     *CDOPacefilnorsty 
+HelveticaNeue-Condensed                   11950     !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ ˆ˜–—‘’‚“”„†‡•…‰‹›™
+Tangerine                                  9423     !$'.0123589:?ABCDEFGIKLMNOPRSTUWXYabcdefghijklmnoprstuvwyz 
+GothamBlack                                1655     ACDEGHIKNOPRSTUWY 
+Gotham-Bold Bold                          11182     :ACEHINOPRSTUacdehimnoprstu 
+_sans                                        22    
+ArialMT                                    2855     BCDLOSU_abcdeiklmnoprstuvwx 
+
+ActionScript Bytes    Location
+------------------    --------
+               532    Scene 1:Frame 1:fl.managers.IFocusManagerComponent
+               609    Scene 1:Frame 1:fl.controls.listClasses.ICellRenderer
+               312    Scene 1:Frame 1:com.oddcast.ui.ISelectable
+               793    Scene 1:Frame 1:fl.controls.listClasses.ListData
+               794    Scene 1:Frame 1:fl.managers.IFocusManager
+               600    Scene 1:Frame 1:fl.core.InvalidationType
+               458    Scene 1:Frame 1:com.oddcast.ui.animation.IScrollEasing
+               500    Scene 1:Frame 1:fl.data.SimpleCollectionItem
+               509    Scene 1:Frame 1:fl.data.TileListCollectionItem
+              1857    Scene 1:Frame 1:com.oddcast.utils.XMLLoader
+              6808    Scene 1:Frame 1:com.oddcast.workshop.ServerInfo
+              2515    Scene 1:Frame 1:fl.managers.StyleManager
+               422    Scene 1:Frame 1:fl.controls.ScrollBarDirection
+               414    Scene 1:Frame 1:fl.controls.ScrollPolicy
+               612    Scene 1:Frame 1:fl.events.DataChangeType
+               477    Scene 1:Frame 1:fl.controls.ButtonLabelPlacement
+               316    Scene 1:Frame 1:com.oddcast.data.IThumbSelectorData
+               332    Scene 1:Frame 1:org.casalib.core.IDestroyable
+               663    Scene 1:Frame 1:com.oddcast.assets.structures.LoadedAssetStruct
+               420    Scene 1:Frame 1:fl.managers.IFocusManagerGroup
+              1217    Scene 1:Frame 1:com.oddcast.audio.CachedTTS
+              2263    Scene 1:Frame 1:com.oddcast.workshop.throttle.Throttler
+              1783    Scene 1:Frame 1:fl.motion.MatrixTransformer
+              2078    Scene 1:Frame 1:com.oddcast.workshop.throttle.Throttling_Logic
+               671    Scene 1:Frame 1:com.oddcast.workshop.throttle.TTS_Audio_List
+              1477    Scene 1:Frame 1:com.oddcast.utils.Event_Expiration
+              2801    Scene 1:Frame 1:com.oddcast.utils.Listener_Manager
+              3779    Scene 1:Frame 1:com.oddcast.encryption.md5
+               554    Scene 1:Frame 1:com.oddcast.utils.UTF8Encoder
+              3234    Scene 1:Frame 1:com.adobe.crypto.MD5
+              1295    Scene 1:Frame 1:com.dynamicflash.util.Base64
+              2789    Scene 1:Frame 1:org.casalib.util.ArrayUtil
+               436    Scene 1:Frame 1:com.oddcast.workshop.Callback_Struct
+              2256    Scene 1:Frame 1:com.oddcast.utils.gateway.Gateway
+               836    Scene 1:Frame 1:com.oddcast.utils.gateway.Gateway_Request
+               636    Scene 1:Frame 1:com.adobe.utils.IntUtil
+              2971    Scene 1:Frame 1:org.casalib.util.NumberUtil
+               901    Scene 1:Frame 1:com.oddcast.utils.MultipartFormFile
+               727    Scene 1:Frame 1:org.casalib.math.Percent
+               328    Scene 1:Frame 1:com.oddcast.utils.gateway.IGateway_Item
+              1518    Scene 1:Frame 1:com.oddcast.utils.gateway.Gateway_FileReferenceList_Pending_Item
+               467    Scene 1:Frame 1:com.oddcast.utils.gateway.Gateway_FileReference_Result
+               802    Scene 1:Frame 1:com.oddcast.utils.gateway.Gateway_Error
+               521    Scene 1:Frame 1:com.oddcast.ui.SelectorItem
+               525    Scene 1:Frame 1:org.casalib.events.IRemovableEventDispatcher
+               898    Scene 1:Frame 1:com.oddcast.utils.IFileUploader
+               520    Scene 1:Frame 1:fl.controls.listClasses.TileListData
+               934    Scene 1:Frame 1:com.oddcast.workshop.ProcessingEvent
+               493    Scene 1:Frame 1:com.oddcast.event.BGEvent
+               628    Scene 1:Frame 1:com.oddcast.event.ScrollEvent
+               730    Scene 1:Frame 1:com.oddcast.event.SelectorEvent
+               778    Scene 1:Frame 1:fl.events.ComponentEvent
+               937    Scene 1:Frame 1:fl.events.DataChangeEvent
+               753    Scene 1:Frame 1:fl.events.ScrollEvent
+              1153    Scene 1:Frame 1:com.oddcast.workshop.SceneEvent
+               998    Scene 1:Frame 1:fl.events.ListEvent
+              7243    Scene 1:Frame 1:fl.managers.FocusManager
+               789    Scene 1:Frame 1:com.oddcast.ui.animation.ConstantSpeedScroll
+               456    Scene 1:Frame 1:org.casalib.core.Destroyable
+               463    Scene 1:Frame 1:com.oddcast.assets.structures.BackgroundStruct
+              4062    Scene 1:Frame 1:com.oddcast.utils.gateway.Gateway_FileReference_Item
+              4876    Scene 1:Frame 1:com.oddcast.utils.gateway.Gateway_Loader_Item
+              4611    Scene 1:Frame 1:com.oddcast.utils.gateway.Gateway_FileReferenceList_Item
+              4801    Scene 1:Frame 1:com.oddcast.workshop.BGUploader
+              3210    Scene 1:Frame 1:fl.data.DataProvider
+              3433    Scene 1:Frame 1:com.oddcast.utils.FileLoaderInstance
+              1957    Scene 1:Frame 1:com.oddcast.utils.MultipartFormPoster
+              1123    Scene 1:Frame 1:org.casalib.events.RemovableEventDispatcher
+              5997    Scene 1:Frame 1:com.oddcast.utils.FileUploader_v2
+               861    Scene 1:Frame 1:com.oddcast.event.AlertEvent
+              1957    Scene 1:Frame 1:org.casalib.events.ListenerManager
+               898    Scene 1:Frame 1:com.oddcast.workshop.WSBackgroundStruct
+              5069    Scene 1:Frame 1:com.oddcast.utils.MoveZoomUtil
+               317    Scene 1:Frame 1:DanceButton_1
+               317    Scene 1:Frame 1:DanceButton_2
+               317    Scene 1:Frame 1:DanceButton_3
+               318    Scene 1:Frame 1:EmailBtn_UI
+               318    Scene 1:Frame 1:FacebookBtn
+               316    Scene 1:Frame 1:TwitterBtn
+              5137    Scene 1:Frame 1:custom.BGController
+              7923    Scene 1:Frame 1:fl.core.UIComponent
+               438    Scene 1:Frame 1:Accessories_TileList_Group_CellRenderer_UI
+              1564    Scene 1:Frame 1:Alert_UI
+               478    Scene 1:Frame 1:AutoPhoto_Search_CellRenderer_UI
+               415    Scene 1:Frame 1:BigShowUI
+               644    Scene 1:Frame 1:BigShow_UI
+               482    Scene 1:Frame 1:Browse_UI
+               363    Scene 1:Frame 1:Button_disabledSkin
+               356    Scene 1:Frame 1:Button_downSkin
+               366    Scene 1:Frame 1:Button_emphasizedSkin
+               356    Scene 1:Frame 1:Button_overSkin
+               375    Scene 1:Frame 1:Button_selectedDisabledSkin
+               369    Scene 1:Frame 1:Button_selectedDownSkin
+               369    Scene 1:Frame 1:Button_selectedOverSkin
+               366    Scene 1:Frame 1:Button_selectedUpSkin
+               353    Scene 1:Frame 1:Button_upSkin
+               372    Scene 1:Frame 1:CellRenderer_disabledSkin
+               366    Scene 1:Frame 1:CellRenderer_downSkin
+               366    Scene 1:Frame 1:CellRenderer_overSkin
+               385    Scene 1:Frame 1:CellRenderer_selectedDisabledSkin
+               379    Scene 1:Frame 1:CellRenderer_selectedDownSkin
+               379    Scene 1:Frame 1:CellRenderer_selectedOverSkin
+               375    Scene 1:Frame 1:CellRenderer_selectedUpSkin
+               363    Scene 1:Frame 1:CellRenderer_upSkin
+               366    Scene 1:Frame 1:ComboBox_disabledSkin
+               359    Scene 1:Frame 1:ComboBox_downSkin
+               359    Scene 1:Frame 1:ComboBox_overSkin
+               356    Scene 1:Frame 1:ComboBox_upSkin
+               414    Scene 1:Frame 1:ComingSoon_UI
+               474    Scene 1:Frame 1:CopyURLUI
+               383    Scene 1:Frame 1:Custom_CellRenderer_disabledSkin
+               377    Scene 1:Frame 1:Custom_CellRenderer_downSkin
+               377    Scene 1:Frame 1:Custom_CellRenderer_overSkin
+               396    Scene 1:Frame 1:Custom_CellRenderer_selectedDisabledSkin
+               390    Scene 1:Frame 1:Custom_CellRenderer_selectedDownSkin
+               390    Scene 1:Frame 1:Custom_CellRenderer_selectedOverSkin
+               387    Scene 1:Frame 1:Custom_CellRenderer_selectedUpSkin
+               374    Scene 1:Frame 1:Custom_CellRenderer_upSkin
+               377    Scene 1:Frame 1:Custom_ComboBox_disabledSkin
+               371    Scene 1:Frame 1:Custom_ComboBox_downSkin
+               371    Scene 1:Frame 1:Custom_ComboBox_overSkin
+               367    Scene 1:Frame 1:Custom_ComboBox_upSkin
+               358    Scene 1:Frame 1:Custom_List_skin
+               388    Scene 1:Frame 1:Custom_ScrollArrowDown_disabledSkin
+               382    Scene 1:Frame 1:Custom_ScrollArrowDown_downSkin
+               382    Scene 1:Frame 1:Custom_ScrollArrowDown_overSkin
+               379    Scene 1:Frame 1:Custom_ScrollArrowDown_upSkin
+               385    Scene 1:Frame 1:Custom_ScrollArrowUp_disabledSkin
+               379    Scene 1:Frame 1:Custom_ScrollArrowUp_downSkin
+               379    Scene 1:Frame 1:Custom_ScrollArrowUp_overSkin
+               375    Scene 1:Frame 1:Custom_ScrollArrowUp_upSkin
+               374    Scene 1:Frame 1:Custom_ScrollBar_thumbIcon
+               375    Scene 1:Frame 1:Custom_ScrollThumb_downSkin
+               375    Scene 1:Frame 1:Custom_ScrollThumb_overSkin
+               372    Scene 1:Frame 1:Custom_ScrollThumb_upSkin
+               382    Scene 1:Frame 1:Custom_ScrollTrack_disabledSkin
+               369    Scene 1:Frame 1:Custom_ScrollTrack_skin
+               485    Scene 1:Frame 1:DancersPlacehold_UI
+               395    Scene 1:Frame 1:DefaultFace_UI
+               523    Scene 1:Frame 1:Download_UI
+               426    Scene 1:Frame 1:EmailSuccessWindowUI
+              2005    Scene 1:Frame 1:Email_UI
+               474    Scene 1:Frame 1:Embed_UI
+               418    Scene 1:Frame 1:Expiration_UI
+               367    Scene 1:Frame 1:Face
+               357    Scene 1:Frame 1:FaceCutter_UI
+               516    Scene 1:Frame 1:Facebook_Connect_Account_Info_UI
+               466    Scene 1:Frame 1:Facebook_Connect_Status_UI
+               497    Scene 1:Frame 1:Facebook_Friends_Post_TileList_CellRenderer_UI
+               511    Scene 1:Frame 1:Facebook_Friends_TileList_CellRenderer_UI
+              1804    Scene 1:Frame 1:Facebook_Friends_UI
+               397    Scene 1:Frame 1:FbLogoutBtn_UI
+               426    Scene 1:Frame 1:HeadPositionHold_UI
+               347    Scene 1:Frame 1:List_skin
+               825    Scene 1:Frame 1:MainPlayerHolder
+               454    Scene 1:Frame 1:Main_Loader_UI
+               457    Scene 1:Frame 1:MakeAnotherUI
+               356    Scene 1:Frame 1:MaskPointArt_UI
+              1892    Scene 1:Frame 1:Mode_Selection_UI
+               494    Scene 1:Frame 1:Myspace_Connect_Status_Dialogue_UI
+               495    Scene 1:Frame 1:Myspace_Connect_Status_UI
+               479    Scene 1:Frame 1:PhotoMaskingScreen_UI
+               362    Scene 1:Frame 1:PinProcessing_UI
+               403    Scene 1:Frame 1:Pin_UI
+               940    Scene 1:Frame 1:Position_UI
+              1755    Scene 1:Frame 1:PostToFacebook_UI
+               685    Scene 1:Frame 1:PreviewEndScreenUI
+               414    Scene 1:Frame 1:PrintReady_UI
+               370    Scene 1:Frame 1:PrintingProcessing_UI
+               478    Scene 1:Frame 1:Processing_UI
+               379    Scene 1:Frame 1:ProgressScrubProgressBar_IU
+               375    Scene 1:Frame 1:ProgressScrubberTrack_UI
+               449    Scene 1:Frame 1:ProgressScrubber_UI
+               377    Scene 1:Frame 1:ScrollArrowDown_disabledSkin
+               371    Scene 1:Frame 1:ScrollArrowDown_downSkin
+               371    Scene 1:Frame 1:ScrollArrowDown_overSkin
+               367    Scene 1:Frame 1:ScrollArrowDown_upSkin
+               374    Scene 1:Frame 1:ScrollArrowUp_disabledSkin
+               367    Scene 1:Frame 1:ScrollArrowUp_downSkin
+               367    Scene 1:Frame 1:ScrollArrowUp_overSkin
+               364    Scene 1:Frame 1:ScrollArrowUp_upSkin
+               363    Scene 1:Frame 1:ScrollBar_thumbIcon
+               369    Scene 1:Frame 1:ScrollPane_disabledSkin
+               359    Scene 1:Frame 1:ScrollPane_upSkin
+               364    Scene 1:Frame 1:ScrollThumb_downSkin
+               364    Scene 1:Frame 1:ScrollThumb_overSkin
+               361    Scene 1:Frame 1:ScrollThumb_upSkin
+               358    Scene 1:Frame 1:ScrollTrack_skin
+              2380    Scene 1:Frame 1:Search_UI
+               738    Scene 1:Frame 1:TermsConditions_UI
+               367    Scene 1:Frame 1:TextInput_disabledSkin
+               358    Scene 1:Frame 1:TextInput_upSkin
+               353    Scene 1:Frame 1:TileList_skin
+               501    Scene 1:Frame 1:UploadButtons_UI
+               644    Scene 1:Frame 1:VideoControls_UI
+               422    Scene 1:Frame 1:VideoEndScreen
+              1965    Scene 1:Frame 1:WS_Art
+               536    Scene 1:Frame 1:Webcam_UI
+               504    Scene 1:Frame 1:art_swc_fla.Oddcastlogoloader_310
+               839    Scene 1:Frame 1:art_swc_fla._debugMC_351
+               525    Scene 1:Frame 1:art_swc_fla.oc_blocker_278
+              1739    Scene 1:Frame 1:art_swc_fla.oc_panels_post_combo_dropBox_373
+               551    Scene 1:Frame 1:art_swc_fla.oc_placeholder_artcopy_264
+               561    Scene 1:Frame 1:art_swc_fla.shutter_anim_174
+               357    Scene 1:Frame 1:autoPhotoMask
+               347    Scene 1:Frame 1:default_1
+               347    Scene 1:Frame 1:default_2
+               347    Scene 1:Frame 1:default_3
+               347    Scene 1:Frame 1:default_4
+               347    Scene 1:Frame 1:default_5
+               368    Scene 1:Frame 1:fl.core.ComponentShim
+               353    Scene 1:Frame 1:focusRectSkin
+               363    Scene 1:Frame 1:oc_autophoto_anchor
+               367    Scene 1:Frame 1:oc_autophoto_maskPoint
+              3327    Scene 1:Frame 1:workshop.ui.MoveZoomControls
+              1152    Scene 1:Frame 1:custom.FacebookLogoutButton
+              3584    Scene 1:Frame 1:com.oddcast.ui.BaseButton
+              5845    Scene 1:Frame 1:com.oddcast.ui.Slider
+              1320    Scene 1:Frame 1:workshop.ui.EmailSelectorItem
+              3460    Scene 1:Frame 1:com.oddcast.ui.OComboBox
+              9931    Scene 1:Frame 1:com.oddcast.ui.Selector
+               363    Scene 1:Frame 1:BGController2
+             10026    Scene 1:Frame 1:fl.controls.ComboBox
+              5235    Scene 1:Frame 1:fl.controls.ScrollBar
+              4966    Scene 1:Frame 1:fl.controls.TextInput
+              5816    Scene 1:Frame 1:fl.containers.BaseScrollPane
+              2939    Scene 1:Frame 1:fl.controls.BaseButton
+              4118    Scene 1:Frame 1:fl.containers.UILoader
+              2733    Scene 1:Frame 1:Bg_Position
+               404    Scene 1:Frame 1:FacebookLogoutButton_UI
+               394    Scene 1:Frame 1:oc_movezoom_arrowBtn
+               395    Scene 1:Frame 1:oc_movezoom_rotateBtn
+               403    Scene 1:Frame 1:oc_movezoom_slider_dragger
+               395    Scene 1:Frame 1:oc_movezoom_zoomInBtn
+               397    Scene 1:Frame 1:oc_movezoom_zoomOutBtn
+               402    Scene 1:Frame 1:oc_panels_email_removeBtn
+               411    Scene 1:Frame 1:oc_panels_email_scrollbar_arrow
+               414    Scene 1:Frame 1:oc_panels_email_scrollbar_dragger
+               411    Scene 1:Frame 1:oc_panels_email_scrollbar_track
+               400    Scene 1:Frame 1:oc_panels_post_combo_btn
+               410    Scene 1:Frame 1:oc_panels_post_scrollbar_arrow
+               413    Scene 1:Frame 1:oc_panels_post_scrollbar_dragger
+               410    Scene 1:Frame 1:oc_panels_post_scrollbar_track
+               395    Scene 1:Frame 1:oc_ui_scrollbar_arrow
+               399    Scene 1:Frame 1:oc_ui_scrollbar_dragger
+               395    Scene 1:Frame 1:oc_ui_scrollbar_track
+              1476    Scene 1:Frame 1:com.oddcast.ui.StickyButton
+              1038    Scene 1:Frame 1:com.oddcast.ui.OCheckBox
+               995    Scene 1:Frame 1:com.oddcast.ui.ComboSelectorItem
+               387    Scene 1:Frame 1:oc_movezoom_slider
+               508    Scene 1:Frame 1:com.oddcast.ui.OScrollBar
+               405    Scene 1:Frame 1:oc_panels_email_recipient
+               393    Scene 1:Frame 1:oc_panels_post_combo
+               476    Scene 1:Frame 1:oc_ui_selector
+              3726    Scene 1:Frame 1:fl.controls.UIScrollBar
+              5872    Scene 1:Frame 1:fl.containers.ScrollPane
+              8298    Scene 1:Frame 1:fl.controls.SelectableList
+              4608    Scene 1:Frame 1:fl.controls.LabelButton
+               403    Scene 1:Frame 1:StickyButton_UI
+               897    Scene 1:Frame 1:com.oddcast.ui.ButtonSelectorItem
+               403    Scene 1:Frame 1:cb_optIn_Email
+               423    Scene 1:Frame 1:oc_panels_post_combo_item
+               409    Scene 1:Frame 1:oc_ui_combo_item
+               418    Scene 1:Frame 1:oc_panels_email_scrollbar
+               417    Scene 1:Frame 1:oc_panels_post_scrollbar
+               403    Scene 1:Frame 1:oc_ui_scrollbar
+              6001    Scene 1:Frame 1:fl.controls.List
+              9665    Scene 1:Frame 1:fl.controls.TileList
+              1664    Scene 1:Frame 1:fl.controls.Button
+              1929    Scene 1:Frame 1:fl.controls.listClasses.CellRenderer
+              2183    Scene 1:Frame 1:com.oddcast.ui.ThumbSelectorItem
+              2069    Scene 1:Frame 1:fl.controls.listClasses.ImageCell
+              1238    Scene 1:Frame 1:workshop.persistent_image.Persistent_Image_Selector_Item
+               627    Scene 1:Frame 1:oc_autophoto_Persistant_Image_thumb
+
+Bitmap                      Compressed    Original      Compression
+------------------------    ----------    ----------    -----------
+silverbackground.jpg             82127       1728000    Lossless
+popup-large_BG.png               15515       1103952    JPEG Quality=90
+video-end_BG.png                 16871        672672    JPEG Quality=90
+logo_small.png                   15602        106088    JPEG Quality=90
+elf07.png                        12197        157648    JPEG Quality=90
+btn_facebook.png                  1137          6084    JPEG Quality=90
+btn_twitter.png                   1189          6084    JPEG Quality=90
+btn_email.png                     1177          6084    JPEG Quality=90
+btn_link.png                      1152          6084    JPEG Quality=90
+video-end_elves.png              40815        478584    JPEG Quality=90
+Dance_3.jpeg                     10390         16524    Lossless
+Dance_2.jpeg                     10616         16728    Lossless
+Dance_1.jpeg                     10259         16524    Lossless
+elf06.png                        20560        279328    JPEG Quality=90
+popup-small_BG.png               11990        787472    JPEG Quality=90
+star2.png                         2609         25600    JPEG Quality=90
+goldbuttonshine.png              89578        720000    Lossless
+elf01.png                        25062        430248    JPEG Quality=90
+elf03.png                        16726        256020    JPEG Quality=90
+hat_large.png                     7867        118584    JPEG Quality=90
+sample.png                        7116         84108    JPEG Quality=90
+elf02.png                        17862        238680    JPEG Quality=90
+elf04-05.png                     27401        507520    JPEG Quality=90
+hat.png                           3740         39856    JPEG Quality=90
+btn_embed.png                     1209          6084    JPEG Quality=90
+btn_pintrest.png                  1242          6084    JPEG Quality=90
+btn_uploadphoto.png               3076         24024    Lossless
+btn_uploadphoto-over.png          2984         24024    Lossless
+facethumb05.jpg                   9682         19600    Lossless
+facethumb03.jpg                   8788         19600    Lossless
+facethumb01.jpg                  10155         19600    Lossless
+facethumb02.jpg                   8785         19600    Lossless
+facethumb04.jpg                   9548         19600    Lossless
+vid01a.jpg                       10013         18700    Lossless
+vid01c.jpg                       10388         18700    Lossless
+vid01d.jpg                       10169         18700    Lossless
+vid01b.jpg                       10515         18700    Lossless
+btn_sceneselect-over.png          1659         16632    Lossless
+vid02a.jpg                       10333         18700    Lossless
+vid02b.jpg                       11544         18700    Lossless
+vid02c.jpg                       11199         18700    Lossless
+vid02d.jpg                       10165         18700    Lossless
+vid03a.jpg                       11471         18700    Lossless
+vid03b.jpg                        9713         18700    Lossless
+vid03c.jpg                       11070         18700    Lossless
+vid03d.jpg                       10957         18700    Lossless
+art_fbconnect_button.gif           746          2116    Lossless
+art_fbconnect_icon.gif             244           288    Lossless
+BG_1300x578.jpg                 182727       3005600    Lossless
+pic.jpg                          95845        236500    Lossless
+facebooklogo.png                  3506          9408    Lossless
+logo_large.png                   21534        156240    JPEG Quality=90
+camera.png                         243          2552    Lossless
+
+
+
+
