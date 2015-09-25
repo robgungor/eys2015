@@ -209,7 +209,7 @@
 		 * 
 		 */		
 		private function instantiate_controllers():void
-		{
+		{		
 			// main controllers
 			new Main_Loader				( art.main_loader );
 			new Alert					( art.alert );

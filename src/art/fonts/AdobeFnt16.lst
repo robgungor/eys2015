@@ -1,0 +1,319 @@
+%!Adobe-FontList 1.16
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Helvetica-Bold
+FamilyName:Helvetica
+StyleName:Bold
+MenuName:Helvetica
+StyleBits:2
+WeightClass:700
+WidthClass:5
+AngleClass:0
+FullName:Helvetica Bold
+WritingScript:Roman
+OutlineFileName:\HelveBol
+DataFormat:POSTResource
+UsesStandardEncoding:yes
+isCFF:no
+FileLength:33740
+FileModTime:1422445013
+DesignSize:-1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Helvetica-Bold
+OutlineFileName:\Helvetica-Bold.scr
+ResourceID:139
+MacStyle:0
+FileLength:12433
+FileModTime:1422445013
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Helvetica-Light
+FamilyName:Helvetica
+StyleName:Light
+MenuName:Helvetica
+StyleBits:0
+WeightClass:300
+WidthClass:5
+AngleClass:0
+FullName:Helvetica Light
+WritingScript:Roman
+OutlineFileName:\Helvetica-Light.ttf
+DataFormat:sfntData
+FileLength:55756
+FileModTime:1422444812
+NameArray:0,Mac,18,Helvetica Light
+NameArray:0,Mac,4,Helvetica Light
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Helvetica-LightOblique
+FamilyName:Helvetica
+StyleName:Light Oblique
+MenuName:Helvetica
+StyleBits:1
+WeightClass:300
+WidthClass:5
+AngleClass:1
+FullName:Helvetica Light Oblique
+WritingScript:Roman
+OutlineFileName:\Helvetica-LightOblique.dfont
+DataFormat:sfntResource
+ResourceID:6513
+FileLength:91084
+FileModTime:1422444440
+NameArray:0,Mac,18,Helvetica Light Oblique
+NameArray:0,Mac,4,Helvetica Light Oblique
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Helvetica-LightOblique
+OutlineFileName:\Helvetica-LightOblique.dfont
+ResourceID:211
+MacStyle:0
+FileLength:91084
+FileModTime:1422444440
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:HelveticaNeue-Bold
+FamilyName:Helvetica Neue
+StyleName:Bold
+MenuName:Helvetica Neue
+StyleBits:2
+WeightClass:700
+WidthClass:5
+AngleClass:0
+FullName:Helvetica Neue Bold
+WritingScript:Roman
+OutlineFileName:\HelveticaNeue-Bold.dfont
+DataFormat:sfntResource
+ResourceID:14151
+FileLength:887057
+FileModTime:1422444096
+NameArray:0,Mac,4,Helvetica Neue Bold
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:HelveticaNeue-Bold
+OutlineFileName:\HelveticaNeue-Bold.dfont
+ResourceID:4684
+MacStyle:0
+FileLength:887057
+FileModTime:1422444096
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:HelveticaNeue
+FamilyName:Helvetica Neue
+StyleName:Regular
+MenuName:Helvetica Neue
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Helvetica Neue
+WritingScript:Roman
+OutlineFileName:\HelveticaNeue.dfont
+DataFormat:sfntResource
+ResourceID:15445
+FileLength:880721
+FileModTime:1422443190
+NameArray:0,Mac,4,Helvetica Neue
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:HelveticaNeue
+OutlineFileName:\HelveticaNeue.dfont
+ResourceID:4684
+MacStyle:0
+FileLength:880721
+FileModTime:1422443190
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:HelveticaNeueLTStd-Md
+FamilyName:Helvetica Neue LT Std
+StyleName:65 Medium
+MenuName:HelveticaNeueLT Std Med
+StyleBits:0
+WeightClass:500
+WidthClass:5
+AngleClass:0
+FullName:Helvetica Neue LT Std 65 Medium
+WritingScript:Roman
+OutlineFileName:\HelveticaNeueLTStd-Md.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:28260
+FileModTime:1422444669
+NameArray:0,Mac,18,HelveticaNeueLT Std Med
+NameArray:0,Mac,4,Helvetica Neue LT Std 65 Medium
+NameArray:0,Win,1,HelveticaNeueLT Std Med
+NameArray:0,Win,16,Helvetica Neue LT Std
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:HelveticaNeueLTStd-Roman
+FamilyName:Helvetica Neue LT Std
+StyleName:55 Roman
+MenuName:HelveticaNeueLT Std
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Helvetica Neue LT Std 55 Roman
+WritingScript:Roman
+OutlineFileName:\HelveticaNeueLTStd-Roman.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:27476
+FileModTime:1422445054
+NameArray:0,Mac,18,HelveticaNeueLT Std
+NameArray:0,Mac,4,Helvetica Neue LT Std 55 Roman
+NameArray:0,Win,1,HelveticaNeueLT Std
+NameArray:0,Win,16,Helvetica Neue LT Std
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:PolarisCondensed-Bold
+FamilyName:Polaris Condensed Bold
+StyleName:Regular
+MenuName:Polaris Condensed Bold
+StyleBits:0
+WeightClass:600
+WidthClass:5
+AngleClass:0
+FullName:Polaris Condensed Bold
+WritingScript:Roman
+OutlineFileName:\PolarisCondensed-Bold.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:51500
+FileModTime:1413302086
+NameArray:0,Mac,4,Polaris Condensed Bold
+NameArray:0,Win,1,Polaris Condensed Bold
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:PolarisCondensed-Book
+FamilyName:Polaris Condensed Book
+StyleName:Regular
+MenuName:Polaris Condensed Book
+StyleBits:0
+WeightClass:600
+WidthClass:5
+AngleClass:0
+FullName:Polaris Condensed Book
+WritingScript:Roman
+OutlineFileName:\PolarisCondensed-Book.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:50504
+FileModTime:1413301786
+NameArray:0,Mac,4,Polaris Condensed Book
+NameArray:0,Win,1,Polaris Condensed Book
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:PolarisCondensed-Heavy
+FamilyName:Polaris Condensed Heavy
+StyleName:Regular
+MenuName:Polaris Condensed Heavy
+StyleBits:0
+WeightClass:600
+WidthClass:5
+AngleClass:0
+FullName:Polaris Condensed Heavy
+WritingScript:Roman
+OutlineFileName:\PolarisCondensed-Heavy.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:51132
+FileModTime:1413299070
+NameArray:0,Mac,4,Polaris Condensed Heavy
+NameArray:0,Win,1,Polaris Condensed Heavy
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:ThirstyScriptBold
+FamilyName:Thirsty Script Bold
+StyleName:Regular
+MenuName:Thirsty Script Bold
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Thirsty Script Bold
+WritingScript:Roman
+OutlineFileName:\ThirstyScriptBold.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:90688
+FileModTime:1422443946
+NameArray:0,Mac,4,Thirsty Script Bold
+NameArray:0,Win,1,Thirsty Script Bold
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:ThirstyScriptMedium
+FamilyName:Thirsty Script Medium
+StyleName:Regular
+MenuName:Thirsty Script Medium
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Thirsty Script Medium
+WritingScript:Roman
+OutlineFileName:\ThirstyScriptMedium.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:90372
+FileModTime:1422444063
+NameArray:0,Mac,4,Thirsty Script Medium
+NameArray:0,Win,1,Thirsty Script Medium
+%EndFont
+
