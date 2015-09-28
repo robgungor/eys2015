@@ -1104,9 +1104,9 @@ package custom
 				cur_ui.video_controls.x = _inBigShow ? 222 : 134;//222;
 				cur_ui.video_controls.y = _inBigShow  ? 155 : 119;//155;		
 				
-				cur_ui.player_hold.x = _inBigShow ? 227 :138;
-				cur_ui.player_hold.y = _inBigShow ? 160 : 138;
-				cur_ui.player_hold.scaleX = cur_ui.player_hold.scaleY = App.asset_bucket.elfVideoRes=="high" ? 0.533 : 1.06; 
+				cur_ui.player_hold.x = _inBigShow ? 227 :33.65;
+				cur_ui.player_hold.y = _inBigShow ? 160 : 101.55;
+				cur_ui.player_hold.scaleX = cur_ui.player_hold.scaleY = App.asset_bucket.elfVideoRes=="high" ? 0.555 : 1.3; 
 				
 				cur_ui.player_hold.mask = cur_ui.videoMask;
 				
