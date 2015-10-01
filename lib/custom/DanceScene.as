@@ -1130,8 +1130,8 @@ package custom
 				
 				cur_ui.player_hold.mask = cur_ui.videoMask;
 				
-				cur_ui.end_greeting.x = _inBigShow ? 228 : 138.55;
-				cur_ui.end_greeting.y = _inBigShow ? 406 : 385.8;
+				cur_ui.end_greeting.x = _inBigShow ? 228 : 33.1;
+				cur_ui.end_greeting.y = _inBigShow ? 406 : 409.55;
 				cur_ui.end_greeting.scaleX = cur_ui.end_greeting.scaleY = 1;				
 			}
 						
