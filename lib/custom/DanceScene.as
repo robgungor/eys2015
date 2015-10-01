@@ -19,6 +19,7 @@ package custom
 	import flash.events.Event;
 	import flash.events.KeyboardEvent;
 	import flash.events.MouseEvent;
+	import flash.geom.ColorTransform;
 	import flash.geom.Matrix;
 	import flash.geom.Rectangle;
 	import flash.media.SoundMixer;
@@ -167,7 +168,10 @@ package custom
 								_mainUI.danceBtns.btn_dance9,
 								_mainUI.danceBtns.btn_dance10,
 								_mainUI.danceBtns.btn_dance11,
-								_mainUI.danceBtns.btn_dance12];
+								_mainUI.danceBtns.btn_dance12,
+								_mainUI.danceBtns.btn_dance13,
+								_mainUI.danceBtns.btn_dance14,
+								_mainUI.danceBtns.btn_dance15];
 								//_mainUI.danceBtns.btn_dance13];
 			
 			_mainUI.danceBtns.btn_dance13.addEventListener(MouseEvent.CLICK, _onHousePartyBtnClicked);
@@ -322,20 +326,37 @@ package custom
 			//var overs:Array = [art.danceBtns.btn_dance1_over, art.danceBtns.btn_dance2_over, art.danceBtns.btn_dance3_over, art.danceBtns.btn_dance4_over, art.danceBtns.btn_dance5_over, art.danceBtns.btn_dance6_over, art.danceBtns.btn_dance7_over, art.danceBtns.btn_dance8_over, art.danceBtns.btn_dance9_over, art.danceBtns.btn_dance10_over, ];
 			//var btns:Array = [art.danceBtns.btn_dance1, art.danceBtns.btn_dance2, art.danceBtns.btn_dance3, art.danceBtns.btn_dance4, art.danceBtns.btn_dance5, art.danceBtns.btn_dance6, art.danceBtns.btn_dance7, art.danceBtns.btn_dance8, art.danceBtns.btn_dance9];
 			var danceBtns:Sprite = art.danceBtns;
-			for(var i:Number = 1; i<Dances.list.length+1; i++)
+			for(var i:Number = 0; i<Dances.list.length; i++)
 			{
-				danceBtns.getChildByName("btn_dance"+i).visible = !(danceBtns.getChildByName("btn_dance"+i+"_over").visible = i == danceIndex+1);
+				
+				//danceBtns.getChildByName("btn_dance"+i).visible = !(danceBtns.getChildByName("btn_dance"+i+"_over").visible = i == danceIndex+1);
+				
 				if(i == danceIndex)
 				{
 					//overs[i].visible = true;
-					//_danceButtons[i].visible = false;
+					_onState(_danceButtons[i] as SimpleButton);
 					
 				}else
 				{
+					_offState(_danceButtons[i] as SimpleButton);
 					//overs[i].visible = false;
 					//_danceButtons[i].visible = true;
 				}
 			}
+		}
+		protected function _onState(button:SimpleButton):void
+		{
+			
+			var myColorTransform:ColorTransform = new ColorTransform();
+			myColorTransform.color = 0xD31515;
+			button.transform.colorTransform = myColorTransform;
+			button.enabled = false;
+			
+		}
+		protected function _offState(button:SimpleButton):void
+		{		
+			button.transform.colorTransform = new ColorTransform();
+			button.enabled = true;			
 		}
 		protected var _danceButtons:Array;
 		protected function _onDanceBtnClicked(e:MouseEvent):void
@@ -1059,7 +1080,7 @@ package custom
 			if (App.ws_art.stage.displayState == StageDisplayState.FULL_SCREEN ||  _isBigshowFirsttime) {
 				cur_ui.video_controls.y = -58-114;
 			}else{
-				cur_ui.video_controls.y = _inBigShow ? 155-60 : 119-50;
+				cur_ui.video_controls.y = _inBigShow ? 155-60 : 102-50;
 			}
 			
 		}
@@ -1070,7 +1091,7 @@ package custom
 			if (App.ws_art.stage.displayState == StageDisplayState.FULL_SCREEN ||  _isBigshowFirsttime) {
 				cur_ui.video_controls.y = -58;
 			}else{
-				cur_ui.video_controls.y = _inBigShow ? 155 : 119;
+				cur_ui.video_controls.y = _inBigShow ? 155 : 102;
 			}
 			
 			
@@ -1097,11 +1118,10 @@ package custom
 				
 				cur_ui.video_controls.visible = false;
 				
-				cur_ui.player_hold.scaleX =cur_ui.player_hold.scaleY = App.asset_bucket.elfVideoRes=="high" ? 0.977 : 1.954;
-				
+				cur_ui.player_hold.scaleX =cur_ui.player_hold.scaleY = App.asset_bucket.elfVideoRes=="high" ? 0.977 : 1.954;				
 			}else 
 			{
-				cur_ui.video_controls.x = _inBigShow ? 222 : 134;//222;
+				cur_ui.video_controls.x = _inBigShow ? 222 : 33;//222;
 				cur_ui.video_controls.y = _inBigShow  ? 155 : 119;//155;		
 				
 				cur_ui.player_hold.x = _inBigShow ? 227 :33.65;

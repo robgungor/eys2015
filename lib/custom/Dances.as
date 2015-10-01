@@ -18,6 +18,9 @@ package custom
 											"80s",				//10
 											"Hip_Hop",			//11
 											"Jingle_Pop",		//12
-											"House_Party"];		//13	
+											"House_Party",		//13
+											"Cats",				//14
+											"Oh_Hannukah"];			//15	
 	}
 }
+

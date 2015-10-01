@@ -133,7 +133,7 @@
 			if(App.ws_art.mainPlayer.visible) 
 			{
 				ui.circle.y = 203;
-				ui.circle.x = 350.25;
+				ui.circle.x = 310.25;
 			} 
 			//_process_name
 			// process name
