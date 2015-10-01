@@ -126,14 +126,14 @@
 				{
 					ui.circle.y =150;
 				}
-				
 			}
-			ui.circle.x = 470.25;
+			
+			ui.circle.x = 404;
 			
 			if(App.ws_art.mainPlayer.visible) 
 			{
 				ui.circle.y = 203;
-				ui.circle.x = 382.25;
+				ui.circle.x = 350.25;
 			} 
 			//_process_name
 			// process name
