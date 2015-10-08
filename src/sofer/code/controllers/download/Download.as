@@ -7,6 +7,7 @@ package code.controllers.download
 	import com.oddcast.event.SendEvent;
 	import com.oddcast.utils.EmailValidator;
 	import com.oddcast.workshop.Callback_Struct;
+	import com.oddcast.workshop.ServerInfo;
 	import com.oddcast.workshop.WSEventTracker;
 	import com.oddcast.workshop.WorkshopMessage;
 	
@@ -14,10 +15,10 @@ package code.controllers.download
 	import flash.events.Event;
 	import flash.events.FocusEvent;
 	import flash.events.MouseEvent;
-	import flash.text.TextField;
-	import flash.ui.Keyboard;
 	import flash.net.URLRequest;
 	import flash.net.navigateToURL;
+	import flash.text.TextField;
+	import flash.ui.Keyboard;
 	
 	/**
 	 * ...
@@ -124,8 +125,8 @@ package code.controllers.download
 		 */
 		private function open_win(  ):void 
 		{	
+			//App.utils.mid_saver.save_message(new SendEvent(SendEvent.SEND, SendEvent.DOWNLOAD_VIDEO), new Callback_Struct( fin, null, null ) );
 			
-			App.utils.mid_saver.save_message(new SendEvent(SendEvent.SEND, SendEvent.DOWNLOAD_VIDEO), new Callback_Struct( fin, null, null ) );
 			
 			function fin():void 
 			{
@@ -136,7 +137,7 @@ package code.controllers.download
 				WSEventTracker.event("edvdx");	
 			}	
 			
-			
+		
 		}
 		/**
 		 * hides the UI
@@ -161,9 +162,9 @@ package code.controllers.download
 			ui.tf_email.addEventListener(FocusEvent.FOCUS_IN, _onTfFocus);
 			ui.tf_email.addEventListener(FocusEvent.FOCUS_OUT, _onTfFocusOut);
 		}
+		
 		protected function _onCbClicked(e:MouseEvent):void
 		{
-			
 		}
 		/**
 		 * handler for Click MouseEvents from the UI
@@ -242,7 +243,8 @@ package code.controllers.download
 		}
 		private function _download(e:Event = null):void
 		{
-			var url:String = "http://host.oddcast.com/api_misc/1255/checkout.php?mId="
+			//var url:String = "http://host.oddcast.com/api_misc/1255/checkout.php?mId="
+			var url:String = ServerInfo.acceleratedURL+"api_misc/1255/checkout.php?mId="
 							+App.asset_bucket.last_mid_saved
 							+"&email="
 							+ui.tf_email.text
@@ -260,7 +262,6 @@ package code.controllers.download
 				bad_words_passed( App.settings.EMAIL_REPLACE_BAD_WORDS ))
 			{
 				_download();
-			
 			}
 			
 			/** validates if all the neccessary fields have been filed in by the user */

@@ -170,11 +170,13 @@ package custom
 								_mainUI.danceBtns.btn_dance11,
 								_mainUI.danceBtns.btn_dance12,
 								_mainUI.danceBtns.btn_dance13,
-								_mainUI.danceBtns.btn_dance14,
-								_mainUI.danceBtns.btn_dance15];
+								_mainUI.danceBtns.btn_dance14];
+								//_mainUI.danceBtns.btn_dance15];
 								//_mainUI.danceBtns.btn_dance13];
 			
-			_mainUI.danceBtns.btn_dance13.addEventListener(MouseEvent.CLICK, _onHousePartyBtnClicked);
+			
+			_mainUI.danceBtns.btn_dance15.addEventListener(MouseEvent.CLICK, _onHousePartyBtnClicked);
+			_mainUI.danceBtns.btn_dance14.addEventListener(MouseEvent.CLICK, _onHanBtnClicked);
 			App.listener_manager.add_multiple_by_object(  _danceButtons, MouseEvent.CLICK, _onDanceBtnClicked, this );
 			App.ws_art.makeAnother.btn_select_a_dance.addEventListener(MouseEvent.CLICK, _onSelectADanceClicked);
 			App.ws_art.makeAnother.btn_elfYourselfLogo.addEventListener(MouseEvent.CLICK, _onElfYourselfLogoClicked);
@@ -323,6 +325,7 @@ package custom
 		protected function _updateDanceButtons():void
 		{
 			var art:MainPlayerHolder = _mainUI;
+			App.ws_art.han_bg.visible = danceIndex == Dances.HAN_DANCE_INDEX;
 			//var overs:Array = [art.danceBtns.btn_dance1_over, art.danceBtns.btn_dance2_over, art.danceBtns.btn_dance3_over, art.danceBtns.btn_dance4_over, art.danceBtns.btn_dance5_over, art.danceBtns.btn_dance6_over, art.danceBtns.btn_dance7_over, art.danceBtns.btn_dance8_over, art.danceBtns.btn_dance9_over, art.danceBtns.btn_dance10_over, ];
 			//var btns:Array = [art.danceBtns.btn_dance1, art.danceBtns.btn_dance2, art.danceBtns.btn_dance3, art.danceBtns.btn_dance4, art.danceBtns.btn_dance5, art.danceBtns.btn_dance6, art.danceBtns.btn_dance7, art.danceBtns.btn_dance8, art.danceBtns.btn_dance9];
 			var danceBtns:Sprite = art.danceBtns;
@@ -330,15 +333,16 @@ package custom
 			{
 				
 				//danceBtns.getChildByName("btn_dance"+i).visible = !(danceBtns.getChildByName("btn_dance"+i+"_over").visible = i == danceIndex+1);
+				var btn:SimpleButton = _danceButtons[i] as SimpleButton;
 				
 				if(i == danceIndex)
 				{
 					//overs[i].visible = true;
-					_onState(_danceButtons[i] as SimpleButton);
+					if(btn) _onState(btn);
 					
 				}else
 				{
-					_offState(_danceButtons[i] as SimpleButton);
+					if(btn) _offState(btn);
 					//overs[i].visible = false;
 					//_danceButtons[i].visible = true;
 				}
@@ -368,7 +372,10 @@ package custom
 			_mainUI.enhanced_end.visible = _mainUI.enhanced_prompt.visible = false;
 			loadDance();	
 		}
-		
+		protected function _onHanBtnClicked(e:MouseEvent):void
+		{
+			App.ws_art.han_bg.visible = true;
+		}
 		protected function _onHousePartyBtnClicked(e:MouseEvent):void
 		{
 			if(_danceIndex == 12) return;
@@ -414,7 +421,7 @@ package custom
 			_mainUI.enhanced_end.visible = false;
 			_mainUI.enhanced_prompt.visible = false;
 			//if(_danceIndex != 12) App.asset_bucket.last_mid_saved = null;
-			_danceIndex = 12; 
+			_danceIndex = Dances.HOUSE_PARTY_DANCE_INDEX; 
 			WSEventTracker.event("ce26"); //WSEventTracker.event("ce"+(5+danceIndex)); //ce17 is used for "Let's Dance" so hardcode this to be 26 --- matt
 			
 			loadDance();
@@ -744,7 +751,7 @@ package custom
 			_bigShowUI.btn_create_your_own.visible 	= false;
 			_bigShowUI.btn_create_your_own.addEventListener(MouseEvent.CLICK, _onCreateYourOwnClicked);
 			_bigShowUI.btn_elfYourselfLogo.addEventListener(MouseEvent.CLICK, _onElfYourselfLogoClicked);
-			_bigShowUI.btn_elfYourselfLogo.buttonMode = true;
+//			_bigShowUI.btn_elfYourselfLogo.buttonMode = true;
 			_mainUI.visible 	= false;
 			
 			
@@ -1078,36 +1085,50 @@ package custom
 			var cur_ui:MovieClip = _inBigShow? _bigShowUI : _mainUI;
 				
 			if (App.ws_art.stage.displayState == StageDisplayState.FULL_SCREEN ||  _isBigshowFirsttime) {
-				cur_ui.video_controls.y = -58-114;
+				cur_ui.video_controls.y = CONTROLS_Y_LS-114;
 			}else{
-				cur_ui.video_controls.y = _inBigShow ? 155-60 : 102-50;
+				cur_ui.video_controls.y = _inBigShow ? CONTROLS_Y_BIG_SHOW-60 : CONTROLS_Y-50;
 			}
 			
 		}
+		private static var CONTROLS_X			:Number = 33;
+		private static var CONTROLS_X_BIG_SHOW	:Number = 161;
+		private static var CONTROLS_Y_LS		:Number = 22;
+		private static var CONTROLS_X_LS		:Number = 18;
+		private static var CONTROLS_Y			:Number = 103;		
+		private static var CONTROLS_Y_BIG_SHOW	:Number = 85;
+	
+		private static var PLAYER_Y				:Number = 102;
+		private static var PLAYER_Y_BIG_SHOW	:Number = 81;
+		private static var PLAYER_Y_LS			:Number = 33;
+		private static var PLAYER_X				:Number = 34;
+		private static var PLAYER_X_BIG_SHOW	:Number = 159;
+		
+		
 		protected function _resetControlsPosition():void
 		{
 			var cur_ui:MovieClip = _inBigShow ? _bigShowUI : _mainUI;
 			
 			if (App.ws_art.stage.displayState == StageDisplayState.FULL_SCREEN ||  _isBigshowFirsttime) {
-				cur_ui.video_controls.y = -58;
+				cur_ui.video_controls.y = CONTROLS_Y_LS;
 			}else{
-				cur_ui.video_controls.y = _inBigShow ? 155 : 102;
+				cur_ui.video_controls.y = _inBigShow ? CONTROLS_Y_BIG_SHOW : CONTROLS_Y;
 			}
 			
 			
 			//hacky
 			//if(_inBigShow && _bigShowUI.player_hold.scaleX > 
-			
 		}
 		//**********************************************
-		public function displayFinalVideo(_which_ui:String, _largeSize:Boolean = false):void { //"bigshow","mainPlayer"
+		public function displayFinalVideo(_which_ui:String, isLargeSize:Boolean = false):void { //"bigshow","mainPlayer"
 			var cur_ui:MovieClip = _inBigShow?(_bigShowUI):(_mainUI);
-			if(!_largeSize) _isBigshowFirsttime = false;
-			App.mediator.doTrace("displayFinalVideo===> " + _largeSize+"  "+_isBigshowFirsttime + "  " + App.asset_bucket.elfVideoRes);
+			//if(!_largeSize) _isBigshowFirsttime = false;
+			App.mediator.doTrace("displayFinalVideo===> " + isLargeSize+"  "+_isBigshowFirsttime + "  " + App.asset_bucket.elfVideoRes);
 			
-			if (_largeSize) 
+			if (isLargeSize) 
 			{
-				cur_ui.video_controls.x = cur_ui.video_controls.y = -58;
+				cur_ui.video_controls.x = CONTROLS_X_LS; 
+				cur_ui.video_controls.y = CONTROLS_Y_LS;
 				cur_ui.player_hold.x = cur_ui.player_hold.y =0;
 				
 				cur_ui.end_greeting.y = _isBigshowFirsttime ? App.ws_art.stage.stageHeight-121 : App.ws_art.stage.stageHeight-117;
@@ -1121,32 +1142,27 @@ package custom
 				cur_ui.player_hold.scaleX =cur_ui.player_hold.scaleY = App.asset_bucket.elfVideoRes=="high" ? 0.977 : 1.954;				
 			}else 
 			{
-				cur_ui.video_controls.x = _inBigShow ? 222 : 33;//222;
-				cur_ui.video_controls.y = _inBigShow  ? 155 : 119;//155;		
+				cur_ui.video_controls.x = _inBigShow ? CONTROLS_X_BIG_SHOW : CONTROLS_X;//222;
+				cur_ui.video_controls.y = _inBigShow  ? CONTROLS_Y_BIG_SHOW : CONTROLS_Y;//155;		
 				
-				cur_ui.player_hold.x = _inBigShow ? 227 :33.65;
-				cur_ui.player_hold.y = _inBigShow ? 160 : 101.55;
+				cur_ui.player_hold.x = _inBigShow ? PLAYER_X_BIG_SHOW : PLAYER_X;
+				cur_ui.player_hold.y = _inBigShow ? PLAYER_Y_BIG_SHOW : PLAYER_Y;
 				cur_ui.player_hold.scaleX = cur_ui.player_hold.scaleY = App.asset_bucket.elfVideoRes=="high" ? 0.555 : 1.3; 
 				
 				cur_ui.player_hold.mask = cur_ui.videoMask;
 				
-				cur_ui.end_greeting.x = _inBigShow ? 228 : 33.1;
-				cur_ui.end_greeting.y = _inBigShow ? 406 : 409.55;
+				cur_ui.end_greeting.x = _inBigShow ? 162 : 33.1;
+				cur_ui.end_greeting.y = _inBigShow ? 391 : 409.55;
 				cur_ui.end_greeting.scaleX = cur_ui.end_greeting.scaleY = 1;				
 			}
 						
-			cur_ui.video_controls.scaleX = cur_ui.video_controls.scaleY = _largeSize ? 2 :1;			 
+			cur_ui.video_controls.scaleX = cur_ui.video_controls.scaleY = isLargeSize ? 1.425 :1;			 
 			
-			cur_ui.videoBorder.visible = cur_ui.videoMask.visible = cur_ui.bgMore.visible = !_largeSize; 
-			cur_ui.videoBorderBig.visible =  _isBigshowFirsttime ? _largeSize : false;
-			cur_ui.videoMaskBig.visible = _largeSize;
+			cur_ui.videoBorder.visible = cur_ui.videoMask.visible = cur_ui.bgMore.visible = !isLargeSize; 
+			cur_ui.videoBorderBig.visible =  _isBigshowFirsttime ? isLargeSize : false;
+			cur_ui.videoMaskBig.visible = isLargeSize;
 			
-			_toggleUI(!_largeSize);
-			
-			
-			
-			
-			
+			_toggleUI(!isLargeSize);	
 		}
 		
 		private function _toggleUI(visible:Boolean = true):void

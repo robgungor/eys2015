@@ -268,7 +268,7 @@
 		{
 			ui.tileList.removeAll();
 			ui.tileList.columnCount = 5;
-			ui.tileList.width = 520;
+			ui.tileList.width = 575;
 			//ui.tileList.setSize(400, 230);
 			//ui.tileList.verticalScrollBar.x = 410;
 			for (var i:int = 0, n:int = _list.length; i<n; i++ )

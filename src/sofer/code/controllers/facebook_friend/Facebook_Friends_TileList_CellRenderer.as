@@ -95,18 +95,17 @@ package code.controllers.facebook_friend
 				{
 					if(_url != _currentURL) return;
 					cur_image = _ldr;
-					var scaler:Rectangle = RatioUtil.scaleToFill(new Rectangle(0,0,cur_image.width, cur_image.height), new Rectangle(0,0,84, 84));
+					var scaler:Rectangle = RatioUtil.scaleToFill(new Rectangle(0,0,cur_image.width, cur_image.height), new Rectangle(0,0,ui.image_holder.width, ui.image_holder.height));
 					cur_image.width = scaler.width;//ui.image_holder.width;
 					cur_image.height = scaler.height//ui.image_holder.height; 
 					ui.image_holder.addChild(cur_image);
-					ui.image_holder.visible = true; 
-					//ui.image_holder.removeChild(ui.image_holder.getChildAt(0));
-					ui.loading_anim.visible = false;
+					ui.image_holder.visible = true; 					
+					ui.loading_anim.visible = false;					
 				}
 				function error(_msg:String):void
-				{
-					
+				{					
 				}
+				
 				function remove_cur_image():void
 				{
 					if (cur_image)

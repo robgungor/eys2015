@@ -98,7 +98,7 @@
 			new Custom_TileList_Skinner( ui.tileList, Facebook_Friends_TileList_CellRenderer );
 			App.listener_manager.add(ui.tileList, Event.CHANGE, friend_selected, this);
 			ui.user_image_placehold.visible = false;
-			ui.tileList.width=530;
+			ui.tileList.width=576;
 		}
 		protected function _onItemSelected(e:SelectorEvent):void
 		{

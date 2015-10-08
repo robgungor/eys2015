@@ -142,7 +142,7 @@
 				var mid			:String	= App.asset_bucket.last_mid_saved;
 				var confirmation:String	= _with_confirmation ? '0' : '1';
 				var sku_list	:String	= build_php_array( ServerInfo.arr_paypal_product_sku );
-				var url			:String	= ServerInfo.localURL + 'paypal/startPaypal.php?doorId=' + ServerInfo.door + '&mId=' + mid + '&skpConf=' + confirmation +'&' + sku_list;
+				var url			:String	= ServerInfo.acceleratedURL + 'paypal/startPaypal.php?doorId=' + ServerInfo.door + '&mId=' + mid + '&skpConf=' + confirmation +'&' + sku_list;
 				
 				var alert:AlertEvent = new AlertEvent(AlertEvent.CONFIRM, '', 'Click OK to continue', null, user_response);
 				alert.report_error = false;

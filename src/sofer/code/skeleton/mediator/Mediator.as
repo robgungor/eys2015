@@ -1497,6 +1497,59 @@
 		public function get_ws_art():WS_Art {
 			return App.ws_art;
 		}
+		public function generateVideo():void {
+			//fetchVideoLink: function(cb){
+//				var self = this;
+//				var _img= ''
+//				var imgString = "";
+//				var head = self.heads.currentHead;
+//				var _extradata=escape("isVideo=true");
+//				
+//				// check if we have to actually generate the video
+//				
+//				// something is breaking this...
+//				// if( self.videoIsValid() ) {
+//				//   if(_.isFunction(cb)) cb(self.get('videoURL'));
+//				// }
+//				
+//				var index = 1;
+//				var dataObject = {
+//					videoId: self.get('selectedVideo'),
+//						doorId: self.config.doorId,
+//						clientId: self.config.clientId,
+//				}
+//					self.heads.each(function(head){
+//						_img = head.get('src');
+//						dataObject["img"+index] = _img;                  
+//						index++;
+//					});
+//				
+//				///http://host-d-vd.oddcast.com/api_misc/1300/generate-video.php
+//				$.ajax({
+//					//crossDomain: false,
+//					//headers: {'X-Requested-With': 'XMLHttpRequest'},
+//					type: 'GET',
+//					data: dataObject,
+//					url: "//"+OC_CONFIG.baseURL +"/api_misc/"+self.config.doorId+"/generate-video.php", 
+//					//http://host-vd.oddcast.com/api_misc/1300/generate-video.php?doorId=1300&clientId=299&videoId=1                
+//					//'//host.oddcast.com/'+self.config.baseURL+'/api_misc/1281/api.php',                 
+//					async: true,
+//					//dataType : 'xml',
+//					dataType : 'text',
+//					beforeSend: function(xhr, opts){
+//						
+//						
+//					},
+//					complete: function(data, textStatus, errorThrown) { 
+//						
+//						var url = $(data.responseText).attr('VURL');
+//						self.set({'videoURL':url});
+//						console.log('got video url: '+url);
+//						if(_.isFunction(cb)) cb(url);  
+//					}
+//				});
+			//},
+		}
 		//********************************************
 		public function _onToggleFullscreen_bsFirsttime(_finCallback:Function = null):void {
 				if (App.ws_art.bigShow.visible == true) {
@@ -1506,9 +1559,12 @@
 		}
 		public function _onToggleFullscreen(_finCallback:Function = null):void {
 			App.ws_art.stage.addEventListener(FullScreenEvent.FULL_SCREEN, on_fullscreen_change);
+			
 			if (App.ws_art.stage.displayState == StageDisplayState.FULL_SCREEN){
+				App.ws_art.stage.scaleMode = StageScaleMode.NO_SCALE;
 				App.ws_art.stage.displayState = StageDisplayState.NORMAL;
 			}else if (App.ws_art.stage.displayState == StageDisplayState.NORMAL) {
+				App.ws_art.stage.scaleMode = StageScaleMode.SHOW_ALL;
 				App.ws_art.stage.displayState = StageDisplayState.FULL_SCREEN;
 			}
 			

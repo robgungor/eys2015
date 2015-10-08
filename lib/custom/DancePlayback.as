@@ -104,6 +104,7 @@ package custom
 
 		}
 		public function hide(quick:Boolean = false):void{
+			
 			if(quick){ 
 				_ui.visible = false; 
 				_ui.alpha = 0;
@@ -112,6 +113,7 @@ package custom
 			TweenLite.to(_ui, .5, {alpha:0, visible:false});
 		}
 		public function show():void{
+			
 			_ui.visible = true;
 			TweenLite.to(_ui, .35, {alpha:1, visible:true});
 		}

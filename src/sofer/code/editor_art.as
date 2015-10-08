@@ -133,7 +133,7 @@
 		private function stage_ready_handler( _e:Event=null ) : void
 		{
 			App.listener_manager.remove(this,Event.ADDED_TO_STAGE, stage_ready_handler);
-			stage.scaleMode = StageScaleMode.SHOW_ALL; //StageScaleMode.NO_SCALE;
+			stage.scaleMode =StageScaleMode.NO_SCALE;//StageScaleMode.SHOW_ALL; 
 			//stage.align =StageAlign.LEFT;
 			stage.addEventListener(Event.RESIZE, _onResize);
 			// trace timestamp even if traces are turned off
@@ -210,6 +210,7 @@
 		 */		
 		private function instantiate_controllers():void
 		{		
+			art.han_bg.visible = false;
 			// main controllers
 			new Main_Loader				( art.main_loader );
 			new Alert					( art.alert );
@@ -292,7 +293,7 @@
 			new Auto_Photo_Search		( art.auto_photo_search );
 			new Download 				(art.mainPlayer.btn_storedownload, art.download);
 			//new CopyURL					(art.mainPlayer.shareBtns.get_url_btn, art.copyURL);
-			
+		
 			new Instagram_Connect();
 			// popular media contact import
 //			new Popular_Media_Login();
