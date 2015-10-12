@@ -1443,6 +1443,7 @@
 			
 			//for(var j:Number = 1; j<6; j++)
 			//{
+			
 			var clip:* = App.ws_art.dancers.getChildByName("face_"+(index+1));
 			var hold:MovieClip= (clip.getChildByName("head_hold") as MovieClip);
 			

@@ -155,7 +155,7 @@ package custom
 			
 			_mainUI.btn_create_another.addEventListener(MouseEvent.CLICK, _onCreateAnotherClicked);
 			_mainUI.btn_elfYourselfLogo.addEventListener(MouseEvent.CLICK, _onElfYourselfLogoClicked);
-			_mainUI.btn_elfYourselfLogo.buttonMode = true;
+			//_mainUI.btn_elfYourselfLogo.buttonMode = true;
 			
 			_danceButtons = [	_mainUI.danceBtns.btn_dance1,
 								_mainUI.danceBtns.btn_dance2,
@@ -378,8 +378,8 @@ package custom
 		}
 		protected function _onHousePartyBtnClicked(e:MouseEvent):void
 		{
-			if(_danceIndex == 12) return;
-			_danceIndex = 12; 
+			if(_danceIndex == Dances.HOUSE_PARTY_DANCE_INDEX) return;
+			_danceIndex = Dances.HOUSE_PARTY_DANCE_INDEX; 
 			_updateDanceButtons();
 			
 			if(App.asset_bucket.enhancedPhotos.length > 0) _mainUI.enhanced_end.visible = true;
@@ -568,6 +568,7 @@ package custom
 				//preview
 				var dances:Array = Dances.list;//["Breakin","Feliz_Navidad","Office_Party","Elfspanol","EDM","Charleston","Disco","Singing","Honky_Tonk","80s","Hip_Hop"];//,"Classic","Soul"
 				var swfURL:String;
+				
 				if (App.asset_bucket.elfVideoRes == "high") {
 					swfURL = ServerInfo.content_url_door + "misc/" + dances[_danceIndex] + "_" + headCount + "h.swf";
 					displayFinalVideo("mainPlayer", false);
@@ -958,7 +959,7 @@ package custom
 			}
 		}
 		protected function _onElfYourselfLogoClicked(e:MouseEvent):void {
-			var OFFICE_MAX_LINK:String = App.mediator.LOGO_LINK;//"http://www.officedepot.com/a/content/holiday/elf-yourself/";
+			var OFFICE_MAX_LINK:String = "//www.officedepot.com/a/content/holiday/elf-yourself-app/?cm_mmc=organic_social-_-elfyourself-_-web-_-2015";//"http://www.officedepot.com/a/content/holiday/elf-yourself/";
 			URL_Opener.open_url( OFFICE_MAX_LINK, "_blank");
 		}
 		
@@ -1102,7 +1103,7 @@ package custom
 		private static var PLAYER_Y_BIG_SHOW	:Number = 81;
 		private static var PLAYER_Y_LS			:Number = 33;
 		private static var PLAYER_X				:Number = 34;
-		private static var PLAYER_X_BIG_SHOW	:Number = 159;
+		private static var PLAYER_X_BIG_SHOW	:Number = 162;
 		
 		
 		protected function _resetControlsPosition():void
@@ -1123,6 +1124,7 @@ package custom
 		public function displayFinalVideo(_which_ui:String, isLargeSize:Boolean = false):void { //"bigshow","mainPlayer"
 			var cur_ui:MovieClip = _inBigShow?(_bigShowUI):(_mainUI);
 			//if(!_largeSize) _isBigshowFirsttime = false;
+			
 			App.mediator.doTrace("displayFinalVideo===> " + isLargeSize+"  "+_isBigshowFirsttime + "  " + App.asset_bucket.elfVideoRes);
 			
 			if (isLargeSize) 
@@ -1147,7 +1149,7 @@ package custom
 				
 				cur_ui.player_hold.x = _inBigShow ? PLAYER_X_BIG_SHOW : PLAYER_X;
 				cur_ui.player_hold.y = _inBigShow ? PLAYER_Y_BIG_SHOW : PLAYER_Y;
-				cur_ui.player_hold.scaleX = cur_ui.player_hold.scaleY = App.asset_bucket.elfVideoRes=="high" ? 0.555 : 1.3; 
+				cur_ui.player_hold.scaleX = cur_ui.player_hold.scaleY = App.asset_bucket.elfVideoRes=="high" ? 0.675 : 1.3; 
 				
 				cur_ui.player_hold.mask = cur_ui.videoMask;
 				

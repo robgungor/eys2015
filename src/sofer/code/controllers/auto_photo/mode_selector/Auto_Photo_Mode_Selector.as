@@ -50,7 +50,8 @@
 		private function init(  ):void 
 		{	
 			App.listener_manager.add_multiple_by_object([
-				ui.btn_elfYourselfLogo,
+				//ui.btn_elfYourselfLogo,
+				ui.btn_officeMaxLink,
 				ui.btn_browse, 
 				ui.btn_facebook, 
 				//ui.btn_instagram, 
@@ -58,7 +59,7 @@
 				ui.btn_close ], MouseEvent.CLICK, btn_handler, this);
 			
 			init_selector();
-			
+			ui.btn_elfYourselfLogo.enabled = false;
 			ui.accept_Cb.addEventListener(MouseEvent.CLICK, _onCbClicked);
 			
 			App.listener_manager.add( ui.termsConditions, MouseEvent.CLICK, show_terms, this );
@@ -144,6 +145,9 @@
 			{	
 				case ui.btn_elfYourselfLogo:	var OFFICE_MAX_LINK:String = App.mediator.LOGO_LINK;//"http://www.officedepot.com/a/content/holiday/elf-yourself/";
 												URL_Opener.open_url( OFFICE_MAX_LINK, "_blank");				
+												break;
+				case ui.btn_officeMaxLink:		var OFFICE_MAX_LOGO_LINK:String = "//www.officedepot.com/a/content/holiday/elf-yourself-app/?cm_mmc=organic_social-_-elfyourself-_-web-_-2015"
+												URL_Opener.open_url( OFFICE_MAX_LOGO_LINK, "_blank");				
 												break;
 				case ui.btn_browse:				App.mediator.doTrace("Auto_photo_mode_selector ===> btn_browse");
 												App.mediator.checkOptIn(App.mediator.autophoto_mode_browse);				
