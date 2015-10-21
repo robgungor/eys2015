@@ -271,6 +271,12 @@
 			if (controller_pool.facebook_connect)
 				controller_pool.facebook_connect.fbcGetFriendsPictures(_fin,_friend_id );
 		}
+		public function facebook_connect_get_user_albums(_fin:Function):void
+		{
+			if (controller_pool.facebook_connect)
+				controller_pool.facebook_connect.fbcGetAlbumsInformation(_fin);
+		}
+		
 		public function facebook_connect_get_users_album_photos( _fin:Function, _user_id:String = null, _max_photos:Number=300 ):void
 		{
 			if (controller_pool.facebook_connect)
@@ -1444,6 +1450,7 @@
 			//for(var j:Number = 1; j<6; j++)
 			//{
 			
+			
 			var clip:* = App.ws_art.dancers.getChildByName("face_"+(index+1));
 			var hold:MovieClip= (clip.getChildByName("head_hold") as MovieClip);
 			
@@ -1458,8 +1465,9 @@
 			for(i = 0; i<controller_pool.auto_photo_apc.savedHeads.length; i++){
 				if(controller_pool.auto_photo_apc.savedHeads[i] != null) numSaved++;
 			}
+			controller_pool.dance_scene.swapHead( controller_pool.dance_scene.defaultHeads[index], index, 0);
 			if(numSaved<1) autophoto_open_mode_selector();
-			
+			//App.asset_bucket.danceScenes = [];
 			/*for(var i:Number = 1; i<6; i++)
 			{
 			var face:* = App.ws_art.dancers.getChildByName("face_"+i);

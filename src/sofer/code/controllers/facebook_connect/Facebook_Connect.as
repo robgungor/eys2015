@@ -5,6 +5,7 @@ package code.controllers.facebook_connect
 	
 	import com.adobe.utils.ArrayUtil;
 	import com.oddcast.event.AlertEvent;
+	import com.oddcast.oc3d.shared.Str;
 	import com.oddcast.utils.Event_Expiration;
 	import com.oddcast.utils.gateway.Gateway;
 	import com.oddcast.utils.gateway.Gateway_Request;
@@ -97,6 +98,9 @@ package code.controllers.facebook_connect
 			App.listener_manager.add( ui.loginBtn, MouseEvent.CLICK, mouse_click_handler, this );
 			App.listener_manager.add_multiple_by_object([App.ws_art.facebook_friend.btn_logout, 
 														App.ws_art.auto_photo_search.btn_logout], MouseEvent.CLICK, onLogout, this);
+			
+			App.listener_manager.add( App.ws_art.mainPlayer.shareBtns.facebook_btn, MouseEvent.CLICK, onShareFacebookClicked, this );
+			
 			facebookId = null;
 			ui.accountInfo.visible = false;
 			
@@ -118,6 +122,11 @@ package code.controllers.facebook_connect
 			ui.accountInfo.tf_userName.text = '';
 			ui.accountInfo.tf_location.text = '';
 			
+		}
+		private function onShareFacebookClicked(e:MouseEvent):void
+		{
+			post_to_own_wall();
+			WSEventTracker.event("uiebfb");			
 		}
 		/************************************************
 		 * 
@@ -315,6 +324,47 @@ package code.controllers.facebook_connect
 				App.mediator.processing_ended(PROCESSING_LOADING_FACEBOOK_DATA);
 				cached_results_friends_album_pictures[user_id] = _pics_xml;
 				var arr_photos	:Array 	= build_photos_array(_pics_xml);
+				_fin(arr_photos);
+			}
+		}
+		/**
+			Function: fbcGetAlbumsInformation
+			
+			Information about the requested user's albums is sent to fbcSetProfileAlbum. The requested user might not be tagged in these pictures.
+			fields: aid, owner, cover_pid, name, created, modified, description, location, size, link, visible, modified_major, edit_link, type, object_id, can_upload	
+			
+			Parameters:
+			
+			strFriendId	- userId of the user
+			
+			Returns:
+			
+			See Also:
+			
+			<fbcGetSubjectsFromPictureId>
+			<fbcGetUserPictures>
+			<fbcGetProfileAlbumCover>
+			<fbcProcessFqlRequest>	
+			<fbcCallFlash>
+		*/
+		public function fbcGetAlbumsInformation(_fin:Function):void {
+			var _friends_id:String = user_id();
+			var prev_result:String = cached_results_friends_pictures[_friends_id];
+			if (prev_result)	// reuse previous result
+				fbcSetAlbumsInformation(prev_result)
+			else	// get a new result
+			{
+				App.mediator.processing_start(PROCESSING_LOADING_FACEBOOK_DATA,PROCESSING_LOADING_FACEBOOK_DATA);
+				ExternalInterface_Proxy.addCallback("fbcSetAlbumsInformation"	, fbcSetAlbumsInformation);
+				ExternalInterface_Proxy.call('fbcGetAlbumsInformation', _friends_id);
+			}
+			
+			function fbcSetAlbumsInformation( _pics_xml:String ):void 
+			{	
+				
+				App.mediator.processing_ended(PROCESSING_LOADING_FACEBOOK_DATA);
+				cached_results_friends_pictures[_friends_id] = _pics_xml;
+				var arr_photos	:Array 	= build_albums_array(_pics_xml);
 				_fin(arr_photos);
 			}
 		}
@@ -756,7 +806,63 @@ package code.controllers.facebook_connect
 					get_user_pictures_callback(null);		// possibly removed because it timed out
 			}
 		}
-		
+		/**
+		 * builds an array of FacebookImage 
+		 * @param _raw_xml XML photo node
+		 <1>
+		 <pid>23687925792340515</pid>
+		 <aid>23687925755872275</aid>
+		 <owner>5515275</owner>
+		 <src>http://photos-f.ak.fbcdn.net/hphotos-ak-snc1/hs026.snc1/2357_625662839546_5515275_38894115_6564_s.jpg</src>       <!-- aprox 130x97 -->
+		 <src_big>http://sphotos.ak.fbcdn.net/hphotos-ak-snc1/hs026.snc1/2357_625662839546_5515275_38894115_6564_n.jpg</src_big>    <!-- aprox 600x450 -->
+		 <src_small>http://photos-f.ak.fbcdn.net/hphotos-ak-snc1/hs026.snc1/2357_625662839546_5515275_38894115_6564_t.jpg</src_small>    <!-- aprox 75x56 -->
+		 <link>http://www.facebook.com/photo.php?pid=38894115&amp;id=5515275</link>
+		 <caption/>
+		 <created>1235426176</created>
+		 <modified>1252470728</modified>
+		 <object_id>625662839546</object_id>
+		 <src_small_height>56</src_small_height>
+		 <src_small_width>75</src_small_width>
+		 <src_big_height>450</src_big_height>
+		 <src_big_width>600</src_big_width>
+		 <src_height>97</src_height>
+		 <src_width>130</src_width>
+		 </1>
+		 * 
+		 * @return
+		 */		
+		private function build_albums_array(_raw_xml:String):Array
+		{
+			var xml			:XML = new XML(_raw_xml);
+			var photoXML	:XML;
+			var photo		:FacebookImage;
+			var arr_photos	:Array = new Array();
+			var num_of_images:int = xml.response.children().length();
+			var profileImage:FacebookImage;
+			for (var i:int = 0; i < num_of_images; i++)
+			{
+				photoXML			= xml.response.children()[i];
+				
+				photo				= new FacebookImage();
+				photo.id			= parseInt(photoXML.pid.toString());
+				
+				photo.albumId		= parseInt(photoXML.aid.toString());
+				photo.userId		= photoXML.owner.toString(); //parseInt(photoXML.owner.toString());
+				photo.name			= photoXML.caption.toString();
+				photo.url			= photoXML.src_big.toString();
+				photo.thumbUrl		= photoXML.src.toString();//photoXML.src_small.toString(); // too small
+				photo.linkUrl		= photoXML.link.toString();
+				photo.creationTime	= parseInt(photoXML.created.toString());
+				photo.modifyTime	= parseInt(photoXML.modified.toString());
+				if(photoXML.pid.toString() == _userProfilePicId) {
+					profileImage = photo;
+				}else{
+					arr_photos.push(photo);
+				}
+			}
+			if(profileImage) arr_photos.unshift(profileImage);
+			return arr_photos;
+		}
 		/**
 		 * builds an array of FacebookImage 
 		 * @param _raw_xml XML photo node

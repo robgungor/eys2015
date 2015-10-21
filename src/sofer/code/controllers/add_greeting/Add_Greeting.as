@@ -170,7 +170,7 @@ package code.controllers.add_greeting
 						if(ui.tf_input.text.length > 0 && ui.tf_input.text != DEFAULT_GREETING) App.asset_bucket.endGreeting = ui.tf_input.text;
 						close_win();
 						App.mediator.gotoMakeAnother();
-						WSEventTracker.event("ce18");
+						WSEventTracker.event("ce23");
 					}
 					break;
 				case ui.btn_clear:		

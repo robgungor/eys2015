@@ -7,6 +7,7 @@ package custom
 		}
 		public static const HOUSE_PARTY_DANCE_INDEX:Number = 14;
 		public static const HAN_DANCE_INDEX:Number = 13;
+		public static const START_DANCE_INDEX:Number = 12;
 		public static const list:Array = [	"Breakin",			//1
 											"Feliz_Navidad", 	//2
 											"Office_Party", 	//3
@@ -20,7 +21,7 @@ package custom
 											"Hip_Hop",			//11
 											"Jingle_Pop",		//12
 											"Cats",				//13
-											"Oh_Hannukah",		//14
+											"Oh_Hanukkah",		//14
 											"House_Party"		//15 -- needs to be last
 											];			//15	
 	}

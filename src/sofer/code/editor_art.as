@@ -210,14 +210,15 @@
 		 */		
 		private function instantiate_controllers():void
 		{		
-			art.han_bg.visible = false;
+			art.mainPlayer.han_bg.visible = false;
+//			art.bigShow.han_bg.visible = false;
 			// main controllers
 			new Main_Loader				( art.main_loader );
 			new Alert					( art.alert );
 		//	new Message_Player			( art.message_player, art.player_holder.player );
 			new MySpace_Connect			( art.myspace_connect_status );
 			new Facebook_Connect		( art.facebook_connect_status );
-			
+
 			var dummy:InteractiveObject = new Sprite();
 			// sharing
 			//new Share_Digg				( art.panel_buttons.diggBtn );
@@ -226,7 +227,8 @@
 			new Email					( art.email_btn, art.email, art.emailSuccess );
 			//new Gallery_Post			( art.panel_buttons.postBtn, art.gallery_post );
 			new Facebook_Friend_Search	( art.facebook_btn, art.facebook_friend );
-			new Facebook_Friend_Post	( App.ws_art.mainPlayer.shareBtns.facebook_btn, art.post_to_facebook );
+			
+			//new Facebook_Friend_Post	( App.ws_art.mainPlayer.shareBtns.facebook_btn, art.post_to_facebook );
 			//new GIF_Export				( art.panel_buttons.btn_animated_gif, art);
 			//new JPG_Export				( art.panel_buttons.saveJpegBtn, art, art);//.player_holder.player.hostMask );
 			//new Audio_To_Phone			( art.panel_buttons.audioToPhoneBtn, art.audio_to_phone );

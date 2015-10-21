@@ -11,6 +11,7 @@ package custom
 	import flash.events.IEventDispatcher;
 	import flash.events.MouseEvent;
 	import flash.geom.Point;
+	import flash.geom.Rectangle;
 	import flash.media.SoundMixer;
 	import flash.media.SoundTransform;
 	import flash.utils.clearTimeout;
@@ -51,6 +52,7 @@ package custom
 			_progressBar = new ProgressBar(_ui.progress);
 			_addListeners();
 			_updateUI();
+			hide();
 		}
 		protected var _forceShow:Boolean;
 		public function forceShowControls():void{
@@ -83,14 +85,17 @@ package custom
 			if(_currentDanceClip.parent == null) return;
 			var newPos:Point = new Point(_currentDanceClip.mouseX, _currentDanceClip.mouseY);
 			var dist:Number = Point.distance(newPos, _lastMousePos);
-			
+			var danceClipSize:Rectangle = _currentDanceClip.getRect(_currentDanceClip);
 			if (_ui.getRect(_currentDanceClip).containsPoint(newPos)) {
 				// Touchin' buttons, force to show	
 				dist = 777;
 			}else if (!_currentDanceClip.parent.getRect(_currentDanceClip).containsPoint(newPos)) {
 				// If not within content viewer	
 				dist = 0;
-			}
+			} 
+				
+			//trying to fix bigshow
+			if((newPos.x < 0 || newPos.y < 0) && danceClipSize.width > 900) dist = 0;
 			
 			_lastMousePos.x = newPos.x;
 			_lastMousePos.y = newPos.y;

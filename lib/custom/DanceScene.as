@@ -109,7 +109,7 @@ package custom
 				if(!_hasBeenInit) _init();
 			}
 			function in_editing_state(e:Event):void{
-				danceIndex = START_DANCE_INDEX;
+				danceIndex = Dances.START_DANCE_INDEX;
 				if(App.asset_bucket.danceScenes[0]) _currentDanceClip = App.asset_bucket.danceScenes[0];
 				var danceScenes:Array = App.asset_bucket.danceScenes;
 				// don't know when this would be called...
@@ -266,16 +266,17 @@ package custom
 			App.ws_art.stop_btn.visible 	= false;
 			_mainUI.visible 	= false;
 			
-			_danceIndex = START_DANCE_INDEX;
+			_danceIndex = Dances.START_DANCE_INDEX;
 			App.asset_bucket.danceScenes = [];
-				
-			App.mediator.gotoMakeAnother();
-				
+			
+			App.mediator.gotoMakeAnother();	
 		}
+
 		protected function _onMiscBtnClicked(e:MouseEvent):void
 		{
 			if(_playback) _playback.pause();
 		}
+		
 		protected function _onPlayFromBeginningClicked(e:MouseEvent):void
 		{
 			if(_currentDanceClip)
@@ -285,7 +286,7 @@ package custom
 			}
 		}
 		
-		protected static const START_DANCE_INDEX:Number = 0;//11;
+		//11;
 		protected function _onCreateAnotherClicked(e:MouseEvent):void
 		{
 			_currentDanceClip.stop();
@@ -295,14 +296,14 @@ package custom
 			function startOver(_ok:Boolean):void
 			{
 				if(!_ok) return;
-				_danceIndex = START_DANCE_INDEX;
+				_danceIndex = Dances.START_DANCE_INDEX;
 				App.ws_art.stop_btn.visible 	= false;
 				_mainUI.visible 	= false;
 				App.mediator.clearHeads();
 				heads = [];
 				App.asset_bucket.danceScenes = [];
 				App.asset_bucket.enhancedPhotos = [];
-				App.asset_bucket.endGreeting = null;
+				App.asset_bucket.endGreeting = null;				
 				App.mediator.autophoto_open_mode_selector();
 			}
 			App.mediator.alert_user(new AlertEvent(AlertEvent.ALERT, "startOver", "Are you sure you want to discard your video and start over?", null, startOver));			
@@ -315,23 +316,27 @@ package custom
 			App.ws_art.dancers.visible = false;
 			
 			var headCount:int = 0;
-			for(var i:Number = 0; i<App.mediator.savedHeads.length; i++){
-				if(App.mediator.savedHeads[i] != null) headCount++;
+			for(var i:Number = 0; i<heads.length; i++){
+				if(App.mediator.savedHeads[i] != null) {
+					headCount++;
+				} else {
+					heads[i] = null;
+				}	
 			}
-			WSEventTracker.event("ce17", null, headCount);
+			
+			WSEventTracker.event("ce4", null, headCount);
 			dance();
 		}
 		
 		protected function _updateDanceButtons():void
 		{
 			var art:MainPlayerHolder = _mainUI;
-			App.ws_art.han_bg.visible = danceIndex == Dances.HAN_DANCE_INDEX;
+			_mainUI.han_bg.visible = danceIndex == Dances.HAN_DANCE_INDEX;
 			//var overs:Array = [art.danceBtns.btn_dance1_over, art.danceBtns.btn_dance2_over, art.danceBtns.btn_dance3_over, art.danceBtns.btn_dance4_over, art.danceBtns.btn_dance5_over, art.danceBtns.btn_dance6_over, art.danceBtns.btn_dance7_over, art.danceBtns.btn_dance8_over, art.danceBtns.btn_dance9_over, art.danceBtns.btn_dance10_over, ];
 			//var btns:Array = [art.danceBtns.btn_dance1, art.danceBtns.btn_dance2, art.danceBtns.btn_dance3, art.danceBtns.btn_dance4, art.danceBtns.btn_dance5, art.danceBtns.btn_dance6, art.danceBtns.btn_dance7, art.danceBtns.btn_dance8, art.danceBtns.btn_dance9];
 			var danceBtns:Sprite = art.danceBtns;
 			for(var i:Number = 0; i<Dances.list.length; i++)
 			{
-				
 				//danceBtns.getChildByName("btn_dance"+i).visible = !(danceBtns.getChildByName("btn_dance"+i+"_over").visible = i == danceIndex+1);
 				var btn:SimpleButton = _danceButtons[i] as SimpleButton;
 				
@@ -374,7 +379,7 @@ package custom
 		}
 		protected function _onHanBtnClicked(e:MouseEvent):void
 		{
-			App.ws_art.han_bg.visible = true;
+			_mainUI.han_bg.visible = true;
 		}
 		protected function _onHousePartyBtnClicked(e:MouseEvent):void
 		{
@@ -523,9 +528,15 @@ package custom
 		public static const DANCES_LOADED:String = "dancesLoaded";
 		protected function _checkIfLoaded():Boolean {
 			var boo:Boolean = true;
+
 			boo = App.asset_bucket.danceScenes[_danceIndex];
 			//if(boo) boo = App.asset_bucket.idleScenes[_danceIndex];
-			
+//			var headCount:int = 0;
+//			for(var i:Number = 0; i<App.mediator.savedHeads.length; i++){
+//				if(App.mediator.savedHeads[i] != null) headCount++;
+//			}
+//			
+//			if(heads.length != headCount) boo = false;
 			if(!boo){
 				//App.mediator.addEventListener(App.mediator.EVENT_WORKSHOP_LOADED_DANCES, _onDancesLoaded);
 				loadDance();
@@ -544,7 +555,6 @@ package custom
 			
 			App.mediator.checkBandwidth(checkBandwidth_FIN);
 			
-
 			function checkBandwidth_FIN(_bw:Number):void{
 				if ( _bw > 400 ) {
 					App.mediator.doTrace("preview_1 ===> " + _bw + ' kb/s');	
@@ -794,6 +804,7 @@ package custom
 				
 				
 				_danceIndex = parseFloat(mid_message.extraData.danceIndex) || 0;
+				_bigShowUI.han_bg.visible = _danceIndex == Dances.HAN_DANCE_INDEX;
 				App.asset_bucket.mid_message = mid_message;
 				
 				_headsToBeLoaded = [];
@@ -904,9 +915,7 @@ package custom
 			_currentDanceClip.addEventListener("swapHeads", _updateHeads);
 			_makeDefaultHeads();
 			
-
-			if(_headsToBeLoaded.length == 0) _startPreroll();
-			
+			if(_headsToBeLoaded.length == 0) _startPreroll();	
 		}
 		public function _startPreroll():void
 		{
@@ -946,6 +955,7 @@ package custom
 				_currentDanceClip.allheads.gotoAndPlay(2);
 				//dumb but he sometimes puts stop in there;
 				_playback.play();
+				
 				_bigShowUI.btn_create_your_own.visible 	= true;
 			}
 		}
@@ -1059,7 +1069,10 @@ package custom
 		{
 			return _danceIndex;
 		}
-
+		public function get defaultHeads():Array
+		{
+			return _defaultHeads;
+		}
 		protected var _defaultHeads:Array;
 		protected var _danceDefaultHeads:Array;
 		protected var _placementRects:Array = [];
@@ -1084,8 +1097,8 @@ package custom
 		protected function _repositionControlsForEndScreenGreeting():void
 		{	
 			var cur_ui:MovieClip = _inBigShow? _bigShowUI : _mainUI;
-				
-			if (App.ws_art.stage.displayState == StageDisplayState.FULL_SCREEN ||  _isBigshowFirsttime) {
+			var isFS:Boolean = App.ws_art.stage.displayState == StageDisplayState.FULL_SCREEN;
+			if (isFS ||  _isBigshowFirsttime) {
 				cur_ui.video_controls.y = CONTROLS_Y_LS-114;
 			}else{
 				cur_ui.video_controls.y = _inBigShow ? CONTROLS_Y_BIG_SHOW-60 : CONTROLS_Y-50;
@@ -1100,8 +1113,8 @@ package custom
 		private static var CONTROLS_Y_BIG_SHOW	:Number = 85;
 	
 		private static var PLAYER_Y				:Number = 102;
-		private static var PLAYER_Y_BIG_SHOW	:Number = 81;
-		private static var PLAYER_Y_LS			:Number = 33;
+		private static var PLAYER_Y_BIG_SHOW	:Number = 87;
+		private static var PLAYER_Y_LS			:Number = 36;
 		private static var PLAYER_X				:Number = 34;
 		private static var PLAYER_X_BIG_SHOW	:Number = 162;
 		
@@ -1109,13 +1122,12 @@ package custom
 		protected function _resetControlsPosition():void
 		{
 			var cur_ui:MovieClip = _inBigShow ? _bigShowUI : _mainUI;
-			
-			if (App.ws_art.stage.displayState == StageDisplayState.FULL_SCREEN ||  _isBigshowFirsttime) {
+			var isFS:Boolean = App.ws_art.stage.displayState == StageDisplayState.FULL_SCREEN;
+			if (isFS||  _isBigshowFirsttime) {
 				cur_ui.video_controls.y = CONTROLS_Y_LS;
 			}else{
 				cur_ui.video_controls.y = _inBigShow ? CONTROLS_Y_BIG_SHOW : CONTROLS_Y;
 			}
-			
 			
 			//hacky
 			//if(_inBigShow && _bigShowUI.player_hold.scaleX > 
@@ -1123,7 +1135,7 @@ package custom
 		//**********************************************
 		public function displayFinalVideo(_which_ui:String, isLargeSize:Boolean = false):void { //"bigshow","mainPlayer"
 			var cur_ui:MovieClip = _inBigShow?(_bigShowUI):(_mainUI);
-			//if(!_largeSize) _isBigshowFirsttime = false;
+			if(!isLargeSize) _isBigshowFirsttime = false;
 			
 			App.mediator.doTrace("displayFinalVideo===> " + isLargeSize+"  "+_isBigshowFirsttime + "  " + App.asset_bucket.elfVideoRes);
 			
@@ -1131,7 +1143,8 @@ package custom
 			{
 				cur_ui.video_controls.x = CONTROLS_X_LS; 
 				cur_ui.video_controls.y = CONTROLS_Y_LS;
-				cur_ui.player_hold.x = cur_ui.player_hold.y =0;
+				cur_ui.player_hold.x = 2;
+				cur_ui.player_hold.y = 2;
 				
 				cur_ui.end_greeting.y = _isBigshowFirsttime ? App.ws_art.stage.stageHeight-121 : App.ws_art.stage.stageHeight-117;
 				cur_ui.end_greeting.scaleX = cur_ui.end_greeting.scaleY = _isBigshowFirsttime ? 1.8 : 1.844;
@@ -1141,7 +1154,7 @@ package custom
 				
 				cur_ui.video_controls.visible = false;
 				
-				cur_ui.player_hold.scaleX =cur_ui.player_hold.scaleY = App.asset_bucket.elfVideoRes=="high" ? 0.977 : 1.954;				
+				cur_ui.player_hold.scaleX =cur_ui.player_hold.scaleY = App.asset_bucket.elfVideoRes=="high" ? 0.977 : 1.8;				
 			}else 
 			{
 				cur_ui.video_controls.x = _inBigShow ? CONTROLS_X_BIG_SHOW : CONTROLS_X;//222;
@@ -1149,7 +1162,7 @@ package custom
 				
 				cur_ui.player_hold.x = _inBigShow ? PLAYER_X_BIG_SHOW : PLAYER_X;
 				cur_ui.player_hold.y = _inBigShow ? PLAYER_Y_BIG_SHOW : PLAYER_Y;
-				cur_ui.player_hold.scaleX = cur_ui.player_hold.scaleY = App.asset_bucket.elfVideoRes=="high" ? 0.675 : 1.3; 
+				cur_ui.player_hold.scaleX = cur_ui.player_hold.scaleY = App.asset_bucket.elfVideoRes=="high" ? 0.675 : 1.2375; 
 				
 				cur_ui.player_hold.mask = cur_ui.videoMask;
 				

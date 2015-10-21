@@ -98,7 +98,7 @@
 			new Custom_TileList_Skinner( ui.tileList, Facebook_Friends_TileList_CellRenderer );
 			App.listener_manager.add(ui.tileList, Event.CHANGE, friend_selected, this);
 			ui.user_image_placehold.visible = false;
-			ui.tileList.width=576;
+			ui.tileList.width=615;
 		}
 		protected function _onItemSelected(e:SelectorEvent):void
 		{
@@ -128,7 +128,10 @@
 			toggle_search( false );
 			reset();
 			set_focus();
-			App.mediator.facebook_search_friends( facebook_friend_selected, true );	
+			App.mediator.facebook_search_friends( facebook_friend_selected, true );
+			//App.mediator.facebook_connect_get_user_albums( facebook_friend_selected );
+			//facebook_friend_selected();
+			
 			App.mediator.autophoto_image_source_type( Auto_Photo_Constants.IMAGE_SOURCE_TYPE_SOCIAL_MEDIA );
 		}
 		public function close_win(  ):void
@@ -263,13 +266,13 @@
 		}
 		protected var _userThumb:CasaSprite;
 		
-		private function facebook_friend_selected( _friend:Facebook_Friend_Item ):void
+		private function facebook_friend_selected( _friend:Facebook_Friend_Item = null):void
 		{
 			
 			App.mediator.facebook_search_friends_close();
 			ui.visible = true;
 			//ui.selector_image.clear();
-			
+			var userID:String = _friend ? _friend.user_id : null;
 			if(_userThumb) _userThumb.destroy();
 			/*if(_friend.user_id == App.mediator.facebook_connect_user_id()) 
 			{
@@ -277,7 +280,7 @@
 				
 			}else
 			{*/
-				App.mediator.facebook_connect_get_users_tagged_and_albums( got_friends_pics, _friend.user_id );
+				App.mediator.facebook_connect_get_users_tagged_and_albums( got_friends_pics, userID );
 			//}
 			
 			_userThumb = new CasaSprite();

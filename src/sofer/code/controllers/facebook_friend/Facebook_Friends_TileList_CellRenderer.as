@@ -74,10 +74,12 @@ package code.controllers.facebook_friend
 		protected var _outline:Shape;
 		protected var _mask:Sprite;
 		protected var _currentURL:String;
-		
+		protected var imageW:Number = 100;
+		protected var imageH:Number = 100;
 		
 		private function load_image(_url:String):void
 		{
+			
 			if (!_url ||
 				_url.length <= 0 ||
 				!cur_image || 
@@ -95,9 +97,11 @@ package code.controllers.facebook_friend
 				{
 					if(_url != _currentURL) return;
 					cur_image = _ldr;
-					var scaler:Rectangle = RatioUtil.scaleToFill(new Rectangle(0,0,cur_image.width, cur_image.height), new Rectangle(0,0,ui.image_holder.width, ui.image_holder.height));
+					var scaler:Rectangle = RatioUtil.scaleToFill(new Rectangle(0,0,cur_image.width, cur_image.height), new Rectangle(0,0,imageW, imageH));
 					cur_image.width = scaler.width;//ui.image_holder.width;
-					cur_image.height = scaler.height//ui.image_holder.height; 
+					cur_image.height = scaler.height;//ui.image_holder.height; 
+					cur_image.x = (imageW - scaler.width)/2;
+					cur_image.y = (imageH - scaler.height)/2;
 					ui.image_holder.addChild(cur_image);
 					ui.image_holder.visible = true; 					
 					ui.loading_anim.visible = false;					

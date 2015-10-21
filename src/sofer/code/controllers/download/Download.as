@@ -130,6 +130,7 @@ package code.controllers.download
 			
 			function fin():void 
 			{
+				ui.tf_email.text = "Your Email";
 				ui.visible = true;
 				ui.accept_Cb.selected = true;
 				set_tab_order();

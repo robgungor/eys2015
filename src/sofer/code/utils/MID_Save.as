@@ -15,6 +15,7 @@
 	import com.oddcast.workshop.*;
 	
 	import custom.Dances;
+	import custom.EnhancedPhoto;
 	
 	import flash.display.*;
 	import flash.events.*;
@@ -23,7 +24,6 @@
 	import flash.system.*;
 	import flash.ui.*;
 	import flash.utils.*;
-	import custom.EnhancedPhoto;
 	
 	/**
 	 * ...
@@ -260,15 +260,18 @@
 					return;
 				} 
 				var bg:WSBackgroundStruct
+				var headInc:Number = 0;
 				for( i = 0; i<App.mediator.savedHeads.length; i++)
 				{
 					var head:HeadStruct = App.mediator.savedHeads[i];
 					if(head)
 					{
+						
 						extraData['mouthCutPoint_'+i] = head.mouthCutPoint;
-						bg = new WSBackgroundStruct(head.url, 0, "head_"+i, "head_"+i, i, i);
+						bg = new WSBackgroundStruct(head.url, 0, "head_"+headInc, "head_"+headInc, headInc, headInc);
 						scene = new SceneStruct(null, bg, null, new Matrix(head.mouthCutPoint), new Matrix(head.mouthCutPoint));
 						scenes.push(scene);
+						headInc++;
 					}
 				}
 				

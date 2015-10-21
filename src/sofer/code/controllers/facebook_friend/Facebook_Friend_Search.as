@@ -14,6 +14,7 @@
 	import flash.text.*;
 	import flash.ui.*;
 	
+	import workshop.fbconnect.FacebookUser;
 	import workshop.fbconnect.Facebook_Friend_Item;
 	import workshop.ui.Facebook_Friend_Post_Selector_Item;
 
@@ -89,7 +90,8 @@
 			
 			new Custom_TileList_Skinner( ui.tileList, Facebook_Friends_TileList_CellRenderer );
 			new Custom_Scrollbar_Skinner( ui.tileList );
-			
+			ui.tileList.columnCount = 5;
+			ui.tileList.width = 600;
 			//ui.tileList.width=420;
         }
 		private function click_event_handler( _e:MouseEvent ):void
@@ -160,6 +162,17 @@
 				function user_logged_in() : void{
 					App.mediator.processing_start( PROCESSING_LOADING_FRIENDS );
 					App.mediator.facebook_connect_get_friends_info(friends_ready);
+					// THIS IS A HACK 
+					var me:FacebookUser = App.mediator.facebook_connect_user();
+					var item	:Facebook_Friend_Item = new Facebook_Friend_Item(me.name.toString(), me.name.toString(), me.pic_big.toString(), me.pic_small.toString(), me.uid.toString());
+					
+					if (select_friend_callback != null){
+						
+						select_friend_callback( item );
+						return;
+					}
+					// END HACK - REMOVE IF YOU WANT THE PANEL TO OPEN AND NOT JUST SELECT THE USER AND SEARCH IMAGES
+					//App.mediator.facebook_connect_get_user_albums(friends_ready);
 					function friends_ready(_friends_list:Array) : void{
 						App.mediator.processing_ended( PROCESSING_LOADING_FRIENDS );
 						friends_list = _friends_list
@@ -168,10 +181,11 @@
 							close_win();
 							App.mediator.autophoto_open_mode_selector();
 						}else{	
-							friends_list.sortOn('name');
+							//friends_list.sortOn('name');
 							if (App.settings.FACEBOOK_CONNECT_USER_FRONT_OF_LIST)
 								move_user_to_start_of_list( App.mediator.facebook_connect_user_id(), friends_list );
-						
+							
+							
 							populate_selector_by_search();
 							/*if (ui.tf_search.text.length > 0)		// user had a search set previously
 								populate_selector_by_search();
@@ -185,6 +199,9 @@
 								user = _friends_list[i];
 								if (user.user_id == _user_id)
 								{
+									
+										
+									
 									_friends_list.unshift( _friends_list.splice( i, 1 ).pop() );
 									break loop1;
 								}
@@ -254,6 +271,11 @@
         {	
 			if (friends_list == null)
 				return;
+			populate_tileList( friends_list );
+			return;
+			
+			//no searching
+			
 			// build list by filter string
 			var list:Array = new Array();
 				for (var i:int = 0; i < friends_list.length; i++) 
@@ -261,6 +283,7 @@
 					if ( selected_list.indexOf(cur_friend.filter_str.toLowerCase()) >= 0 )
 						list.push(cur_friend);
 				}
+			
             populate_tileList( list );
 		}
 		
@@ -268,7 +291,7 @@
 		{
 			ui.tileList.removeAll();
 			ui.tileList.columnCount = 5;
-			ui.tileList.width = 575;
+			ui.tileList.width = 700;
 			//ui.tileList.setSize(400, 230);
 			//ui.tileList.verticalScrollBar.x = 410;
 			for (var i:int = 0, n:int = _list.length; i<n; i++ )

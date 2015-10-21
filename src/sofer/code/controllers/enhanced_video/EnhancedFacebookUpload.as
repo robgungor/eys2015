@@ -94,7 +94,7 @@ package code.controllers.enhanced_video
 			new Custom_Scrollbar_Skinner( ui.tileList );
 			new Custom_TileList_Skinner( ui.tileList, Facebook_Friends_TileList_CellRenderer );
 			//ui.user_image_placehold.visible = false;
-			ui.tileList.width=530;
+			ui.tileList.width=610;
 			
 			set_ui_listeners();
 		}
