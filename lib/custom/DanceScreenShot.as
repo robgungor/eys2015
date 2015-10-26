@@ -97,14 +97,14 @@ package custom
 		}
 		public function swapHead( bmp:Bitmap, index:Number, mouth:* = null):void
 		{
-			var mouthBmp:Bitmap;
-			
-			if(mouth is Number)
-			{
-				mouth = _makeMouth(bmp, mouth);
-			}
-			if( mouth is Bitmap ) mouthBmp = mouth;
-			mouthBmp = new Bitmap(mouthBmp.bitmapData, "auto", true);
+//			var mouthBmp:Bitmap;
+//			
+//			if(mouth is Number)
+//			{
+//				mouth = _makeMouth(bmp, mouth);
+//			}
+//			if( mouth is Bitmap ) mouthBmp = mouth;
+//			mouthBmp = new Bitmap(mouthBmp.bitmapData, "auto", true);
 			
 			var head:MovieClip = _swf.getChildByName("head"+(index+1)) as MovieClip
 			var headSize	:Rectangle 	= RatioUtil.scaleToFill( new Rectangle(0,0,bmp.width, bmp.height), _placementRects[index]);
@@ -112,7 +112,7 @@ package custom
 			
 			if(bmp is Bitmap) bmp = new Bitmap((bmp as Bitmap).bitmapData.clone(), "auto", true);
 				
-			if(App.mediator.danceIndex == 4) bmp = _makeNoMouthFace(bmp, bmp.height - mouthBmp.height);
+			//if(App.mediator.danceIndex == 4) bmp = _makeNoMouthFace(bmp, bmp.height - mouthBmp.height);
 			
 			//set size
 			bmp.width 			= headSize.width;
@@ -128,15 +128,15 @@ package custom
 				
 				if(App.mediator.danceIndex == 4)
 				{
-					mouthBmp.scaleX = bmp.scaleX;
-					mouthBmp.scaleY = bmp.scaleY;
-					mouthBmp.y 		= (bmp.height+bmp.y);				
-					
-					if(mouthMC)
-					{
-						mouthMC.removeChildAt( 0 );
-						mouthMC.addChild( mouthBmp );
-					}
+//					mouthBmp.scaleX = bmp.scaleX;
+//					mouthBmp.scaleY = bmp.scaleY;
+//					mouthBmp.y 		= (bmp.height+bmp.y);				
+//					
+//					if(mouthMC)
+//					{
+//						mouthMC.removeChildAt( 0 );
+//						mouthMC.addChild( mouthBmp );
+//					}
 					
 					head.addChildAt(faceMC, 1); 
 				}
@@ -147,6 +147,7 @@ package custom
 					faceMC.addChild( bmp );
 				}
 			}
+			
 		}
 		private function _makePlacementRects():void
 		{
