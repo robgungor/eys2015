@@ -6,7 +6,7 @@ package workshop.fbconnect {
 	import com.oddcast.workshop.WSBackgroundStruct;
 	
 	public class FacebookImage extends WSBackgroundStruct {
-		public var albumId:int;
+		public var albumId:*;
 		public var userId:String;
 		public var linkUrl:String;
 		public var creationTime:uint;

@@ -138,7 +138,7 @@ package code.controllers
 					function fin( _content:XML ):void 
 					{	var result:String = unescape(_content.toString().split("+").join(" "));
 						//App.mediator.alert_user( new AlertEvent(null,'f9t553',result, {embed:result}, embed_user_response, false) );
-						//WSEventTracker.event("uieb");
+						WSEventTracker.event("uieb");
 						ui.tf_embed.text = result;
 						ui.visible = true;
 					}

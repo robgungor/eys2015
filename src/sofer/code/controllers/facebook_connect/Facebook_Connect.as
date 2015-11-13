@@ -57,6 +57,8 @@ package code.controllers.facebook_connect
 		private var cached_results_friends_pictures:Dictionary = new Dictionary();
 		/** previous results stored by user id key... so dic[userid] = String of previous javascript query */
 		private var cached_results_friends_album_pictures:Dictionary = new Dictionary();
+		private var cached_results_album_covers:Dictionary = new Dictionary();
+		private var cached_results_album_pictures:Dictionary = new Dictionary();
 		/*
 		* 
 		* 
@@ -324,6 +326,86 @@ package code.controllers.facebook_connect
 				App.mediator.processing_ended(PROCESSING_LOADING_FACEBOOK_DATA);
 				cached_results_friends_album_pictures[user_id] = _pics_xml;
 				var arr_photos	:Array 	= build_photos_array(_pics_xml);
+				_fin(arr_photos);
+			}
+		}
+		
+		/**
+		 * retrieves photos from users albums, there might not be faces present 
+		 * @param _fin - passes array when complete
+		 * @param _user_id - if null retrieves logged in users photos (self)
+		 * @param _max_photos - max num of photos... its been known to fail over 400
+		 */	
+		/*
+		Function: fbcGetPicturesFromTheAlbum
+		
+		Picture information from the specified album are sent to fbcSetPicturesFromTheAlbum. The requested user might not be tagged in these pictures.
+		fields: pid, aid, owner, src_small, src_small_height, src_small_width, src_big, src_big_height, src_big_width, src, src_height, src_width, link, caption, created, modified, object_id	
+		
+		Parameters:
+		
+		strAlbumId	- albumId of the album <fbcGetAlbumsInformation>
+		nNumberOfPictures - Max number of pictures to include.
+		
+		Returns:
+		
+		See Also:
+		
+		<fbcGetSubjectsFromPictureId>
+		<fbcGetUserPictures>
+		<fbcGetProfileAlbumCover>
+		<fbcProcessFqlRequest>	
+		<fbcCallFlash>
+		*/
+		
+		//public function fbcGetPicturesFromAlbums( _fin:Function, _user_id:String = null, _max_photos:Number=300 ):void
+		public function fbcGetPicturesFromTheAlbum(_fin:Function, _albumId:String = null, _max_photos:Number=300):void
+		{
+			//var user_id:String = _user_id==null ? facebookId.toString() : _user_id;
+			
+			var prev_result:String = cached_results_album_pictures[_albumId];
+			if (prev_result)	// reuse previous result
+				fbcSetPicturesFromTheAlbum(prev_result)
+			else	// get a new result
+			{
+				App.mediator.processing_start(PROCESSING_LOADING_FACEBOOK_DATA,PROCESSING_LOADING_FACEBOOK_DATA);
+				ExternalInterface_Proxy.addCallback("fbcSetPicturesFromTheAlbum"	, fbcSetPicturesFromTheAlbum);
+				ExternalInterface_Proxy.call('fbcGetPicturesFromTheAlbum', _albumId, _max_photos);
+			}
+			
+			function fbcSetPicturesFromTheAlbum(_pics_xml:String):void
+			{
+				App.mediator.processing_ended(PROCESSING_LOADING_FACEBOOK_DATA);
+				cached_results_friends_album_pictures[_albumId] = _pics_xml;
+				var arr_photos	:Array 	= build_photos_array(_pics_xml);
+				_fin(arr_photos);
+			}
+		}
+		/**
+		 * retrieves photos from users albums, there might not be faces present 
+		 * @param _fin - passes array when complete
+		 * @param _user_id - if null retrieves logged in users photos (self)
+		 * @param _max_photos - max num of photos... its been known to fail over 400
+		 */	
+		public function fbcEnumerateAlbums( _fin:Function, _user_id:String = null, _max_photos:Number=300 ):void
+		{
+			var user_id:String = _user_id==null ? facebookId.toString() : _user_id;
+			
+			var prev_result:String = cached_results_album_covers[user_id];
+			if (prev_result)	// reuse previous result
+				fbcSetEnumerateAlbums(prev_result)
+			else	// get a new result
+			{
+				App.mediator.processing_start(PROCESSING_LOADING_FACEBOOK_DATA,PROCESSING_LOADING_FACEBOOK_DATA);
+				ExternalInterface_Proxy.addCallback("fbcSetEnumerateAlbums"	, fbcSetEnumerateAlbums);
+				ExternalInterface_Proxy.call('fbcEnumerateAlbums', user_id);
+			}
+			
+			function fbcSetEnumerateAlbums(_pics_xml:String):void
+			{
+				App.mediator.processing_ended(PROCESSING_LOADING_FACEBOOK_DATA);
+				cached_results_album_covers[user_id] = _pics_xml;
+				var arr_photos	:Array 	= build_albums_array(_pics_xml);
 				_fin(arr_photos);
 			}
 		}
@@ -831,38 +913,38 @@ package code.controllers.facebook_connect
 		 * 
 		 * @return
 		 */		
-		private function build_albums_array(_raw_xml:String):Array
-		{
-			var xml			:XML = new XML(_raw_xml);
-			var photoXML	:XML;
-			var photo		:FacebookImage;
-			var arr_photos	:Array = new Array();
-			var num_of_images:int = xml.response.children().length();
-			var profileImage:FacebookImage;
-			for (var i:int = 0; i < num_of_images; i++)
-			{
-				photoXML			= xml.response.children()[i];
-				
-				photo				= new FacebookImage();
-				photo.id			= parseInt(photoXML.pid.toString());
-				
-				photo.albumId		= parseInt(photoXML.aid.toString());
-				photo.userId		= photoXML.owner.toString(); //parseInt(photoXML.owner.toString());
-				photo.name			= photoXML.caption.toString();
-				photo.url			= photoXML.src_big.toString();
-				photo.thumbUrl		= photoXML.src.toString();//photoXML.src_small.toString(); // too small
-				photo.linkUrl		= photoXML.link.toString();
-				photo.creationTime	= parseInt(photoXML.created.toString());
-				photo.modifyTime	= parseInt(photoXML.modified.toString());
-				if(photoXML.pid.toString() == _userProfilePicId) {
-					profileImage = photo;
-				}else{
-					arr_photos.push(photo);
-				}
-			}
-			if(profileImage) arr_photos.unshift(profileImage);
-			return arr_photos;
-		}
+//		private function build_albums_array(_raw_xml:String):Array
+//		{
+//			var xml			:XML = new XML(_raw_xml);
+//			var photoXML	:XML;
+//			var photo		:FacebookImage;
+//			var arr_photos	:Array = new Array();
+//			var num_of_images:int = xml.response.children().length();
+//			var profileImage:FacebookImage;
+//			for (var i:int = 0; i < num_of_images; i++)
+//			{
+//				photoXML			= xml.response.children()[i];
+//				
+//				photo				= new FacebookImage();
+//				photo.id			= parseInt(photoXML.pid.toString());
+//				
+//				photo.albumId		= parseInt(photoXML.aid.toString());
+//				photo.userId		= photoXML.owner.toString(); //parseInt(photoXML.owner.toString());
+//				photo.name			= photoXML.caption.toString();
+//				photo.url			= photoXML.src_big.toString();
+//				photo.thumbUrl		= photoXML.src.toString();//photoXML.src_small.toString(); // too small
+//				photo.linkUrl		= photoXML.link.toString();
+//				photo.creationTime	= parseInt(photoXML.created.toString());
+//				photo.modifyTime	= parseInt(photoXML.modified.toString());
+//				if(photoXML.pid.toString() == _userProfilePicId) {
+//					profileImage = photo;
+//				}else{
+//					arr_photos.push(photo);
+//				}
+//			}
+//			if(profileImage) arr_photos.unshift(profileImage);
+//			return arr_photos;
+//		}
 		/**
 		 * builds an array of FacebookImage 
 		 * @param _raw_xml XML photo node
@@ -908,6 +990,53 @@ package code.controllers.facebook_connect
 				photo.name			= photoXML.caption.toString();
 				photo.url			= photoXML.src_big.toString();
 				photo.thumbUrl		= photoXML.src.toString();//photoXML.src_small.toString(); // too small
+				photo.linkUrl		= photoXML.link.toString();
+				photo.creationTime	= parseInt(photoXML.created.toString());
+				photo.modifyTime	= parseInt(photoXML.modified.toString());
+				if(photoXML.pid.toString() == _userProfilePicId) {
+					profileImage = photo;
+				}else{
+					arr_photos.push(photo);
+				}
+			}
+			if(profileImage) arr_photos.unshift(profileImage);
+			return arr_photos;
+		}
+		
+		/**
+		 * builds an array of FacebookImage 
+		 * @param _raw_xml XML photo node
+		 * <0>
+		 * 	<aid>100003611804690_1073741836</aid>
+		 * 	<name>Biggie</name>
+		 * 	<cover_pid>100003611804690_1073742157</cover_pid>
+		 * 	<photo_count>1</photo_count>
+		 * 	<video_count>0</video_count>
+		 * 	<src_small>https://scontent.xx.fbcdn.net/hphotos-xal1/v/t1.0-0/s75x225/11988745_741852039278516_3553675573122242305_n.jpg?oh=f633941a0707f8f40fb3b9ae20c3fd1a&oe=56EB87B1</src_small>
+		 * </0>
+		 * 
+		 * @return
+		 */		
+		private function build_albums_array(_raw_xml:String):Array
+		{
+			var xml			:XML = new XML(_raw_xml);
+			var photoXML	:XML;
+			var photo		:FacebookImage;
+			var arr_photos	:Array = new Array();
+			var num_of_images:int = xml.response.children().length();
+			var profileImage:FacebookImage;
+			for (var i:int = 0; i < num_of_images; i++)
+			{
+				photoXML			= xml.response.children()[i];
+				
+				photo				= new FacebookImage();
+				photo.id			= parseInt(photoXML.pid.toString());
+				
+				photo.albumId		= photoXML.aid.toString();
+				photo.userId		= photoXML.owner.toString(); //parseInt(photoXML.owner.toString());
+				photo.name			= photoXML.caption.toString();
+				photo.url			= photoXML.src_small.toString();
+				photo.thumbUrl		= photoXML.src_small.toString();//photoXML.src_small.toString(); // too small
 				photo.linkUrl		= photoXML.link.toString();
 				photo.creationTime	= parseInt(photoXML.created.toString());
 				photo.modifyTime	= parseInt(photoXML.modified.toString());

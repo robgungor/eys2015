@@ -274,9 +274,14 @@
 		public function facebook_connect_get_user_albums(_fin:Function):void
 		{
 			if (controller_pool.facebook_connect)
-				controller_pool.facebook_connect.fbcGetAlbumsInformation(_fin);
+				controller_pool.facebook_connect.fbcEnumerateAlbums(_fin);
 		}
 		
+		public function facebook_connect_get_pictures_from_the_album( _fin:Function, _album_id:String = null, _max_photos:Number=300 ):void
+		{
+			if (controller_pool.facebook_connect)
+				controller_pool.facebook_connect.fbcGetPicturesFromTheAlbum(_fin, _album_id,_max_photos);
+		}
 		public function facebook_connect_get_users_album_photos( _fin:Function, _user_id:String = null, _max_photos:Number=300 ):void
 		{
 			if (controller_pool.facebook_connect)

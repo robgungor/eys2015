@@ -14,6 +14,7 @@
 	import flash.text.*;
 	import flash.ui.*;
 	
+	import workshop.fbconnect.FacebookImage;
 	import workshop.fbconnect.FacebookUser;
 	import workshop.fbconnect.Facebook_Friend_Item;
 	import workshop.ui.Facebook_Friend_Post_Selector_Item;
@@ -149,67 +150,141 @@
 			ui.tf_search.text = '';
 			ui.tileList.removeAll();
 			ui.tileList.selectedItem = null;
-			retrieve_friends_list();
+			//retrieve_friends_list();
+			retrieve_albums();
 			
 			set_focus();
-			
-			function retrieve_friends_list() : void{
+			function retrieve_albums() : void{
 				if (App.mediator.facebook_connect_is_logged_in())
 					user_logged_in();
 				else
 					App.mediator.facebook_connect_login(user_logged_in);
-					
+				
 				function user_logged_in() : void{
 					App.mediator.processing_start( PROCESSING_LOADING_FRIENDS );
-					App.mediator.facebook_connect_get_friends_info(friends_ready);
+					App.mediator.facebook_connect_get_user_albums(albums_ready);
 					// THIS IS A HACK 
-					var me:FacebookUser = App.mediator.facebook_connect_user();
-					var item	:Facebook_Friend_Item = new Facebook_Friend_Item(me.name.toString(), me.name.toString(), me.pic_big.toString(), me.pic_small.toString(), me.uid.toString());
-					
-					if (select_friend_callback != null){
-						
-						select_friend_callback( item );
-						return;
-					}
+//					var me:FacebookUser = App.mediator.facebook_connect_user();
+//					var item	:Facebook_Friend_Item = new Facebook_Friend_Item(me.name.toString(), me.name.toString(), me.pic_big.toString(), me.pic_small.toString(), me.uid.toString());
+//					
+//					if (select_friend_callback != null){
+//						
+//						select_friend_callback( item );
+//						return;
+//					}
 					// END HACK - REMOVE IF YOU WANT THE PANEL TO OPEN AND NOT JUST SELECT THE USER AND SEARCH IMAGES
 					//App.mediator.facebook_connect_get_user_albums(friends_ready);
-					function friends_ready(_friends_list:Array) : void{
+					function albums_ready(_albums_list:Array) : void{
 						App.mediator.processing_ended( PROCESSING_LOADING_FRIENDS );
-						friends_list = _friends_list
+						
+						friends_list = _albums_list
 						if (friends_list == null ||friends_list.length == 0){	
 							App.mediator.alert_user(new AlertEvent(AlertEvent.ERROR, "f9t555", "There are no friends available"));
 							close_win();
 							App.mediator.autophoto_open_mode_selector();
 						}else{	
 							//friends_list.sortOn('name');
-							if (App.settings.FACEBOOK_CONNECT_USER_FRONT_OF_LIST)
-								move_user_to_start_of_list( App.mediator.facebook_connect_user_id(), friends_list );
+							//if (App.settings.FACEBOOK_CONNECT_USER_FRONT_OF_LIST)
+							//	move_user_to_start_of_list( App.mediator.facebook_connect_user_id(), friends_list );
 							
 							
-							populate_selector_by_search();
+							var list:Array = new Array()
+							// build list by search string
+							for (var i:int = 0; i < friends_list.length; i++) 
+							{	var image	:FacebookImage 	= friends_list[i];
+								var friend:Facebook_Friend_Item = new Facebook_Friend_Item('', image.name, image.url, image.url, image.albumId.toString());
+								 
+								list.push(friend);
+							}
+							friends_list = list;
+							populate_tileList( list );
+							
+							
+							
+							
 							/*if (ui.tf_search.text.length > 0)		// user had a search set previously
-								populate_selector_by_search();
+							populate_selector_by_search();
 							else									// no search so show whatever is selected in the filter
-								populate_selector_by_filer();*/
+							populate_selector_by_filer();*/
 						}
 						
-						function move_user_to_start_of_list( _user_id:String, _friends_list:Array ) : void{
-							var user:Facebook_Friend_Item;
-							loop1: for (var i:int = 0, n:int = _friends_list.length; i<n; i++ ){
-								user = _friends_list[i];
-								if (user.user_id == _user_id)
-								{
-									
-										
-									
-									_friends_list.unshift( _friends_list.splice( i, 1 ).pop() );
-									break loop1;
-								}
-							}
-						}
+//						function move_user_to_start_of_list( _user_id:String, _friends_list:Array ) : void{
+//							var user:Facebook_Friend_Item;
+//							loop1: for (var i:int = 0, n:int = _friends_list.length; i<n; i++ ){
+//								user = _friends_list[i];
+//								if (user.user_id == _user_id)
+//								{
+//									
+//									
+//									
+//									_friends_list.unshift( _friends_list.splice( i, 1 ).pop() );
+//									break loop1;
+//								}
+//							}
+//						}
 					}
 				}
 			}
+		
+		
+		
+//			function retrieve_friends_list() : void{
+//				if (App.mediator.facebook_connect_is_logged_in())
+//					user_logged_in();
+//				else
+//					App.mediator.facebook_connect_login(user_logged_in);
+//					
+//				function user_logged_in() : void{
+//					App.mediator.processing_start( PROCESSING_LOADING_FRIENDS );
+//					App.mediator.facebook_connect_get_friends_info(friends_ready);
+//					// THIS IS A HACK 
+//					var me:FacebookUser = App.mediator.facebook_connect_user();
+//					var item	:Facebook_Friend_Item = new Facebook_Friend_Item(me.name.toString(), me.name.toString(), me.pic_big.toString(), me.pic_small.toString(), me.uid.toString());
+//					
+//					if (select_friend_callback != null){
+//						
+//						select_friend_callback( item );
+//						return;
+//					}
+//					// END HACK - REMOVE IF YOU WANT THE PANEL TO OPEN AND NOT JUST SELECT THE USER AND SEARCH IMAGES
+//					//App.mediator.facebook_connect_get_user_albums(friends_ready);
+//					function friends_ready(_friends_list:Array) : void{
+//						App.mediator.processing_ended( PROCESSING_LOADING_FRIENDS );
+//						friends_list = _friends_list
+//						if (friends_list == null ||friends_list.length == 0){	
+//							App.mediator.alert_user(new AlertEvent(AlertEvent.ERROR, "f9t555", "There are no friends available"));
+//							close_win();
+//							App.mediator.autophoto_open_mode_selector();
+//						}else{	
+//							//friends_list.sortOn('name');
+//							if (App.settings.FACEBOOK_CONNECT_USER_FRONT_OF_LIST)
+//								move_user_to_start_of_list( App.mediator.facebook_connect_user_id(), friends_list );
+//							
+//							
+//							populate_selector_by_search();
+//							/*if (ui.tf_search.text.length > 0)		// user had a search set previously
+//								populate_selector_by_search();
+//							else									// no search so show whatever is selected in the filter
+//								populate_selector_by_filer();*/
+//						}
+//						
+//						function move_user_to_start_of_list( _user_id:String, _friends_list:Array ) : void{
+//							var user:Facebook_Friend_Item;
+//							loop1: for (var i:int = 0, n:int = _friends_list.length; i<n; i++ ){
+//								user = _friends_list[i];
+//								if (user.user_id == _user_id)
+//								{
+//									
+//										
+//									
+//									_friends_list.unshift( _friends_list.splice( i, 1 ).pop() );
+//									break loop1;
+//								}
+//							}
+//						}
+//					}
+//				}
+//			}
         }
 		private function friend_selected( _e:Event ):void
 		{
@@ -297,10 +372,11 @@
 			for (var i:int = 0, n:int = _list.length; i<n; i++ )
 			{
 				var friend:Facebook_Friend_Item = _list[ i ];
-				ui.tileList.addItem( {label:friend.name.substr(0, friend.name.indexOf(" ")), thumb:friend.img_large_url, data:friend } );
+				ui.tileList.addItem( {label:friend.name.substr(0, friend.name.indexOf(" ")), thumb:friend.img_thumb_url, data:friend } );
 				// break LOOP1;
 			}
 		}
+		
 		
 		private function filter_by_char( _char:String ):void 
 		{	var tf				:TextField	= ui.tf_filter;

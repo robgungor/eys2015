@@ -128,7 +128,7 @@
 			toggle_search( false );
 			reset();
 			set_focus();
-			App.mediator.facebook_search_friends( facebook_friend_selected, true );
+			App.mediator.facebook_search_friends( facebook_album_selected, true );
 			//App.mediator.facebook_connect_get_user_albums( facebook_friend_selected );
 			//facebook_friend_selected();
 			
@@ -266,6 +266,69 @@
 		}
 		protected var _userThumb:CasaSprite;
 		
+		private function facebook_album_selected( _friend:Facebook_Friend_Item = null):void
+		{
+			
+			App.mediator.facebook_search_friends_close();
+			ui.visible = true;
+			//ui.selector_image.clear();
+			var userID:String = _friend ? _friend.user_id : null;
+			if(_userThumb) _userThumb.destroy();
+			/*if(_friend.user_id == App.mediator.facebook_connect_user_id()) 
+			{
+			retrieve_facebook_user_own_images();
+			
+			}else
+			{*/
+		
+			App.mediator.facebook_connect_get_pictures_from_the_album( got_album_pics, userID );
+			//}
+			
+			_userThumb = new CasaSprite();
+			
+			var request:Gateway_Request = new Gateway_Request( _friend.img_large_url, new Callback_Struct(fin) );
+			Gateway.retrieve_Loader( request );
+			
+			ui.user_name.text = _friend.name;
+			function fin(ldr:Loader):void
+			{
+				_userThumb.addChild(ldr);
+				var scaler:Rectangle = RatioUtil.scaleToFit( new Rectangle(0,0,ldr.width, ldr.height), new Rectangle(0,0, ui.user_image_placehold.width,  ui.user_image_placehold.height));
+				_userThumb.x = ui.user_image_placehold.x;
+				_userThumb.y = ui.user_image_placehold.y;
+				ldr.width = scaler.width;
+				ldr.height = scaler.height;
+				_userThumb.graphics.beginFill(0,1);
+				_userThumb.graphics.drawRect(-4,-4,scaler.width+8, scaler.height+8);
+				_userThumb.graphics.endFill();
+				ui.addChild(_userThumb);
+			}
+			
+			
+			function got_friends_pics( _list:Array ):void 
+			{	
+				if (_list && _list.length > 0)
+					image_searcher.set_photo_list( _list );
+					
+				else
+					App.mediator.alert_user(new AlertEvent(AlertEvent.ERROR, 'f9t212', 'Your friend does not allow applications to access their photos, please try another friend.', null, closeAndGoBack));
+			}
+			function got_album_pics( _list:Array ):void 
+			{	
+				if (_list && _list.length > 0)
+					image_searcher.set_photo_list( _list );
+					
+				else
+					App.mediator.alert_user(new AlertEvent(AlertEvent.ERROR, 'f9t212', 'Your friend does not allow applications to access their photos, please try another friend.', null, closeAndGoBack));
+			}
+			function closeAndGoBack():void
+			{
+				//App.mediator.autophoto_open_mode_selector();
+				App.mediator.auto_photo_back_to_facebook_search_friends();
+				close_win();
+			}
+		}
+		
 		private function facebook_friend_selected( _friend:Facebook_Friend_Item = null):void
 		{
 			
@@ -305,6 +368,14 @@
 			
 			
 			function got_friends_pics( _list:Array ):void 
+			{	
+				if (_list && _list.length > 0)
+					image_searcher.set_photo_list( _list );
+					
+				else
+					App.mediator.alert_user(new AlertEvent(AlertEvent.ERROR, 'f9t212', 'Your friend does not allow applications to access their photos, please try another friend.', null, closeAndGoBack));
+			}
+			function got_album_pics( _list:Array ):void 
 			{	
 				if (_list && _list.length > 0)
 					image_searcher.set_photo_list( _list );
