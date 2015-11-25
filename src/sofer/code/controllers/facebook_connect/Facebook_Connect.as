@@ -127,6 +127,7 @@ package code.controllers.facebook_connect
 		}
 		private function onShareFacebookClicked(e:MouseEvent):void
 		{
+			WSEventTracker.event("ce19");	
 			post_to_own_wall();
 			WSEventTracker.event("uiebfb");			
 		}

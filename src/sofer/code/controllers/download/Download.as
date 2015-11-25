@@ -126,7 +126,7 @@ package code.controllers.download
 		private function open_win(  ):void 
 		{	
 			App.utils.mid_saver.save_message(new SendEvent(SendEvent.SEND, SendEvent.DOWNLOAD_VIDEO), new Callback_Struct( fin, null, null ) );
-			
+			WSEventTracker.event("ce22");
 			
 			function fin():void 
 			{
